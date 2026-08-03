@@ -76,24 +76,55 @@ card.paste(portrait, (W - PW, 0), mask)
 # --- type
 manrope = ImageFont.truetype(f'{SCRATCH}/manrope.ttf', 76)
 manrope.set_variation_by_axes([800])
-inter = ImageFont.truetype(f'{SCRATCH}/inter.ttf', 27)
+inter = ImageFont.truetype(f'{SCRATCH}/inter.ttf', 26)
 inter.set_variation_by_axes([400])
-label = ImageFont.truetype(f'{SCRATCH}/inter.ttf', 19)
+label = ImageFont.truetype(f'{SCRATCH}/inter.ttf', 17)
 label.set_variation_by_axes([500])
 
 d = ImageDraw.Draw(card)
 x = 78
+# The portrait starts at 730 and feathers in over 150px. Text stops short of it.
+COLUMN = 700 - x
 
-# Gold dot plus eyebrow, the site's own pairing. The company goes here rather
-# than under the name, so "Founder" is not said twice on one card.
+
+def tracked(draw, xy, text, font, fill, spacing):
+    """Draw with letter-spacing. The site's .label rule tracks out at 0.06em,
+    which has no equivalent in Pillow, and padding the string with spaces
+    overshoots badly once the line is 35 characters long."""
+    cx, cy = xy
+    for ch in text:
+        draw.text((cx, cy), ch, font=font, fill=fill)
+        cx += font.getlength(ch) + spacing
+    return cx - xy[0] - spacing
+
+
+def wrap(text, font, width):
+    """Greedy wrap measured against the real font rather than a guessed
+    characters-per-line, so a copy change cannot silently run under the photo."""
+    lines, line = [], ''
+    for word in text.split():
+        trial = f'{line} {word}'.strip()
+        if font.getlength(trial) <= width:
+            line = trial
+        else:
+            if line:
+                lines.append(line)
+            line = word
+    if line:
+        lines.append(line)
+    return lines
+
+
+# Gold dot plus eyebrow, the site's own pairing.
 d.ellipse((x, 176, x + 9, 185), fill=GOLD)
-d.text((x + 20, 170), 'F O U N D E R ,   G Y A   M E D I A   G R O U P', font=label, fill=DIM)
+tracked(d, (x + 20, 169), 'EXECUTIVE COACH & GROWTH STRATEGIST', label, DIM, 1.6)
 
 d.text((x, 214), 'Apollon', font=manrope, fill=TEXT)
 d.text((x, 296), 'Papas', font=manrope, fill=TEXT)
 
-d.text((x, 412), 'Education that prepares people', font=inter, fill=DIM)
-d.text((x, 448), 'for the real market.', font=inter, fill=DIM)
+TAGLINE = 'Helping founders and organizations scale with systems, and strategic execution.'
+for i, line in enumerate(wrap(TAGLINE, inter, COLUMN)):
+    d.text((x, 412 + i * 36), line, font=inter, fill=DIM)
 
 card.save(OUT, quality=88, optimize=True, progressive=True)
 print('wrote', OUT, card.size)
