@@ -36,6 +36,13 @@ source SVG is two-tone (white letterforms, `#FFE600` beam); `.trusted-logo`'s
 
 ## Waiting on the deploy
 
+**Deployed 2026-09-02, commit e1b2b1e.** All three brand routes now serve
+prerendered HTML from the VPS. The nginx vhost already had the `$uri/` term so
+no config change was needed. One cosmetic issue found and left open: `/about`
+and `/reviews` 301 to their trailing-slash form before serving, while the
+canonical tags and sitemap use the no-slash form. Fix and rationale in
+`docs/deploy-nginx.md` under "Trailing slashes"; it needs a one-line vhost edit.
+
 **4. Create the `cta_click` GTM tag.** HANDOFF Part 6 and Open item 6. The
 dataLayer push is live in the code (`src/lib/analytics.ts`, fired by the hero's
 "Save my free seat at PowerUp!" button). The tag that listens for it does not
@@ -46,8 +53,9 @@ any tag in the container fires a conversion event on an all-pages trigger, it
 must be scoped so it never fires on `/`, `/about` or `/reviews`. This could not
 be checked from the codebase - it needs someone inside the GTM UI.
 
-**6. Submit the new sitemap in GSC** (`sc-domain:apollonpapas.com`), after the
-nginx change in `docs/deploy-nginx.md` is confirmed working.
+**6. Submit the new sitemap in GSC** (`sc-domain:apollonpapas.com`). Now
+unblocked - the deploy is live and `https://apollonpapas.com/sitemap.xml`
+serves as `text/xml` with all five URLs.
 
 ## Audit findings the handoff did not carry
 

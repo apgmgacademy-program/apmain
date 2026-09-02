@@ -1,8 +1,9 @@
 # Deploying the prerendered build (nginx)
 
 Written for the apollonpapas.com rebuild (dev-handoff-package/HANDOFF.md Part 1).
-Nothing here has been applied to the server yet - this pass was built and tested
-on localhost only.
+**Deployed 2026-09-02** (commit e1b2b1e). The vhost already had the `$uri/` term,
+so no nginx change was needed. See "Trailing slashes" below for the one thing
+that is still not ideal.
 
 ## What changed about the output
 
@@ -43,12 +44,42 @@ route after hydration. Only a `curl` shows it.
 which is why `/about` returns the home page under `npm run preview` but
 `/about/` does not. That is a preview-server quirk, not a build defect.
 
-Verify after deploy:
+Verify after deploy (note the `-L`, see below):
 
 ```bash
-curl -s https://apollonpapas.com/about | grep -o '<title>[^<]*'
+curl -sL https://apollonpapas.com/about | grep -o '<title>[^<]*'
 # must be "The Honest Version · Apollon Papas", NOT the home title
 ```
+
+## Trailing slashes (open, cosmetic)
+
+`try_files $uri $uri/` resolves `/about` by matching the *directory*
+`dist/about/`, and nginx answers that with a `301` to `/about/` before serving
+`/about/index.html`. So the live behaviour is:
+
+```
+/about   -> 301 -> /about/   -> 200  The Honest Version · Apollon Papas
+/reviews -> 301 -> /reviews/ -> 200  Reviews · Apollon Papas
+```
+
+Correct content, but one wasted hop, and both the canonical tag and
+`sitemap.xml` use the **no-slash** form that redirects. Crawlers follow it, so
+nothing is broken; it is untidy rather than harmful. Note the handoff's own
+acceptance test in Part 8 is written without `-L` and so reads as a failure.
+
+Two ways to close it, neither applied:
+
+1. **Serve it directly (preferred).** In the apex `location /`, insert
+   `$uri/index.html` ahead of `$uri/`:
+   ```nginx
+   try_files $uri $uri/index.html $uri/ /index.html;
+   ```
+   `/about` then returns 200 with no redirect, and the URLs match the canonical,
+   the sitemap and HANDOFF Parts 2 and 4 exactly. Back the vhost up, `nginx -t`,
+   then `systemctl reload nginx`.
+2. Or move the canonical tags in `src/seo.ts` and the `<loc>` entries in
+   `public/sitemap.xml` to the trailing-slash form. This contradicts the handoff,
+   which specifies `/about` and `/reviews` without slashes.
 
 ## The three text files must not be caught by the fallback
 
