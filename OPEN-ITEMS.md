@@ -38,10 +38,9 @@ source SVG is two-tone (white letterforms, `#FFE600` beam); `.trusted-logo`'s
 
 **Deployed 2026-09-02, commit e1b2b1e.** All three brand routes now serve
 prerendered HTML from the VPS. The nginx vhost already had the `$uri/` term so
-no config change was needed. One cosmetic issue found and left open: `/about`
-and `/reviews` 301 to their trailing-slash form before serving, while the
-canonical tags and sitemap use the no-slash form. Fix and rationale in
-`docs/deploy-nginx.md` under "Trailing slashes"; it needs a one-line vhost edit.
+the only vhost change needed was a trailing-slash fix (`/about` and `/reviews`
+were 301-ing before serving), applied the same day. All three routes now return
+200 with zero redirects. See `docs/deploy-nginx.md`.
 
 **4. Create the `cta_click` GTM tag.** HANDOFF Part 6 and Open item 6. The
 dataLayer push is live in the code (`src/lib/analytics.ts`, fired by the hero's
