@@ -3,40 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Apollon Papas</title>
-<meta name="description" content="Apollon Papas is a Greek entrepreneur and executive whose work spans enterprise artificial intelligence, business strategy and digital transformation. As the founder of GYA Media Group, he advises organizations on growth systems and innovation, while supporting education and sustainability through philanthropy." />
-<meta property="og:title" content="Apollon Papas" />
-<!-- Short on purpose, and the same line the card carries. Feeds truncate the
-     preview blurb well before the search description above would end. -->
-<meta property="og:description" content="Helping founders and organizations scale with systems, and strategic execution." />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Apollon Papas" />
-<meta property="og:url" content="https://apollonpapas.com/" />
-<!-- Built by scripts/make-og-image.py. 1200x630 is the ratio every platform
-     crops to, so the card is authored at it rather than left to be cropped:
-     the portrait is 4:5 and a 1.91:1 crop of it loses the top of the head. -->
-<meta property="og:image" content="https://apollonpapas.com/images/og-apollon-papas-v2.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Apollon Papas, Executive Coach and Growth Strategist" />
-<meta name="twitter:card" content="summary_large_image" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Apollon Papas",
-  "alternateName": "Απόλλων Παπάς",
-  "url": "https://apollonpapas.com/",
-  "jobTitle": "Executive Coach & Growth Strategist",
-  "description": "Apollon Papas is a Greek entrepreneur and executive whose work spans enterprise artificial intelligence, business strategy and digital transformation. As the founder of GYA Media Group, he advises organizations on growth systems and innovation, while supporting education and sustainability through philanthropy.",
-  "worksFor": { "@type": "Organization", "name": "GYA Media Group" },
-  "image": "https://apollonpapas.com/images/og-apollon-papas-v2.jpg",
-  "sameAs": ["https://www.linkedin.com/in/apollonpapas/"],
-  "email": "hello@apollonpapas.com"
-}
+<!--
+  Everything that differs per route - title, description, canonical, og:* and
+  the JSON-LD graph - is written in at build time by scripts/prerender.mjs from
+  src/seo.ts. In `vite dev` the home route's head is injected by the plugin in
+  vite.config.ts, so the marker is never visible in a browser.
+-->
+<!--app-head-->
+<!--
+  Google Tag Manager (HANDOFF Part 6). One container for the whole domain:
+  GTM-5S2Q3XZM already carries GA4 (G-19MWNBHZP0), the Meta pixel bridge,
+  scroll-depth and outbound-click tracking, and was already scoped to the
+  programme pages. The brand routes simply join it. Do not add a second
+  container, and do not install gtag.js directly.
+
+  Gated to the production hostname so localhost, preview builds and the VPS
+  staging checkout never push sessions into Apollo's live GA4 property. Remove
+  the guard only if you want dev traffic in the reports.
+-->
+<script>
+(function () {
+  var live = ['apollonpapas.com', 'www.apollonpapas.com'];
+  if (live.indexOf(location.hostname) === -1) return;
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5S2Q3XZM');
+})();
 </script>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S2Q3XZM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="root"></div>
 <script type="module" src="/src/main.tsx"></script>
 <script src="https://cms.kyroma.dev/overlay/loader.js"></script>

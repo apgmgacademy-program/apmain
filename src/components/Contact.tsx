@@ -18,6 +18,21 @@ export default function Contact() {
         <div className="contact-actions">
           <a className="btn btn-ghost" href={SITE.linkedinUrl} target="_blank" rel="noopener noreferrer" data-edit-id="home.contact.linkedin" data-edit-key="contact.linkedin">{t('contact.linkedin')}</a>
         </div>
+        {/* HANDOFF 5.9. Still no form: this section routes people, it does not
+            capture them. Enterprise work goes to the agency, and anyone who read
+            all the way down without picking a program gets one last free door. */}
+        <div className="contact-routes">
+          <p className="contact-route" data-edit-id="home.contact.enterprise" data-edit-key="contact.enterprise">
+            <a href={SITE.gyaUrl} target="_blank" rel="noopener noreferrer">
+              {t('contact.enterprise')} <span aria-hidden="true">↗</span>
+            </a>
+          </p>
+          <p className="contact-route" data-edit-id="home.contact.webinar" data-edit-key="contact.webinar">
+            <a href={SITE.webinarUrl}>
+              {t('contact.webinar')} <span aria-hidden="true">→</span>
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );

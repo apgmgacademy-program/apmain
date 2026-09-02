@@ -15,6 +15,9 @@ export const SITE = {
   // button falls back to the contact anchor so nothing dead-links in the meantime.
   calendlyUrl: '',
   crsUrl: 'https://join-crs.com/',
+  gyaUrl: 'https://www.gya-media.com/',
+  webinarUrl: '/webinar-powerup',
+  sprintUrl: '/fromchaostorevenue',
   // Apollo has paused the Greek locale. The toggle is hidden and i18n is pinned
   // to EN (see src/i18n/index.ts); el.json stays in the build so flipping this
   // back to true is the only change needed to bring Greek back.
@@ -40,7 +43,12 @@ export type Program = {
   kicker: string;
   title: string;
   desc: string;
-  status: 'live' | 'free' | 'soon';
+  // 'soon' is retained for anything Apollo parks later; the two unreleased
+  // programs moved to 'waitlist' in HANDOFF 5.4.
+  status: 'live' | 'free' | 'soon' | 'waitlist';
+  // Ladder label (HANDOFF 5.4): a quiet chip beside the status one. Doubles as
+  // the "Programme in Greek" note on the CRS card.
+  tag?: string;
 };
 
 export const PROGRAM_GROUPS = ['founders', 'students'] as const;
@@ -119,6 +127,70 @@ export const STORY_SHOTS: StoryShot[] = [
   { src: '/images/story/s8.jpg', side: 'right', top: '80%', rot: '4deg',   w: '205px', nudge: '12px' },
 ];
 
+// Audit F12: "50+ Publications" is a stat with no artifact behind it, and the
+// 2023-2025 Journey card compresses three years of authority-building into nine
+// words. The fix is three to five of the best pieces linked from that card;
+// linked ones become citable sources with Apollo's name on them.
+//
+// Apollo has not sent the URLs yet (see OPEN-ITEMS.md), and a publication link
+// is not something to guess at. The row below renders only when this array has
+// entries, so supplying them here is the entire remaining change - no component
+// edit needed. `outlet` is optional and shown as a quiet suffix.
+export type Publication = { title: string; url: string; outlet?: string };
+export const PUBLICATIONS: Publication[] = [];
+
+// Which Journey card the publication links hang under. Matched on the year
+// string rather than an array index, so reordering the timeline in the locale
+// files cannot silently move them onto the wrong card.
+export const PUBLICATIONS_YEAR = '2023-2025';
+
+// HANDOFF 5.5: steps 1, 3 link to their programme pages and 5 to gya-media.com.
+// Steps 2 and 4 (VAULT, Mentorship) stay unlinked until those pages exist and
+// Apollo confirms the slugs - do not guess them. See OPEN-ITEMS.md.
+export const PATH_LINKS: Record<string, string | undefined> = {
+  powerup: SITE.webinarUrl,
+  vault: undefined,
+  sprint: SITE.sprintUrl,
+  mentorship: undefined,
+  gya: SITE.gyaUrl,
+};
+
+// /reviews groups the 119 rows into the four bands HANDOFF 5.6 asks for. The
+// CSV's `country` column is the only geography it carries, so the mapping is
+// explicit rather than inferred; a country added to a future export and missed
+// here surfaces in the build (scripts/prerender.mjs fails on an unmapped one).
+export const REVIEW_REGIONS = ['Europe', 'Middle East', 'Africa', 'Americas'] as const;
+export type ReviewRegion = (typeof REVIEW_REGIONS)[number];
+
+export const COUNTRY_REGION: Record<string, ReviewRegion> = {
+  Bulgaria: 'Europe',
+  Cyprus: 'Europe',
+  'Czech Republic': 'Europe',
+  France: 'Europe',
+  Germany: 'Europe',
+  Greece: 'Europe',
+  Italy: 'Europe',
+  Netherlands: 'Europe',
+  Poland: 'Europe',
+  Portugal: 'Europe',
+  Romania: 'Europe',
+  Serbia: 'Europe',
+  Spain: 'Europe',
+  Turkey: 'Europe',
+  'United Kingdom': 'Europe',
+  Jordan: 'Middle East',
+  Lebanon: 'Middle East',
+  'Saudi Arabia': 'Middle East',
+  'United Arab Emirates': 'Middle East',
+  Egypt: 'Africa',
+  Ghana: 'Africa',
+  Kenya: 'Africa',
+  Morocco: 'Africa',
+  Nigeria: 'Africa',
+  'South Africa': 'Africa',
+  'United States': 'Americas',
+};
+
 export const AURORA_PALETTE = ['#F2C14E', '#FF7A3C', '#E85CCB', '#5B7CF5', '#2FD6C2'];
 
 // Token hex values for GSAP color tweens (GSAP cannot tween var() keywords)
@@ -128,7 +200,18 @@ export const TOKEN_FAINT = '#5E5E66';
 
 // GYA Media featured clients. Single-color SVGs and transparent PNGs so the
 // mono-white filter in .trusted-logo renders them as clean white silhouettes.
+// HANDOFF 5.7 adds the seven brands named in the story. They lead the strip,
+// because the hero copy names them as the proof.
 export const TRUSTED_LOGOS = [
+  { src: '/assets/logos/amazon.svg', alt: 'Amazon', cls: '' },
+  { src: '/assets/logos/samsung.svg', alt: 'Samsung', cls: '' },
+  { src: '/assets/logos/shein.svg', alt: 'SHEIN', cls: '' },
+  { src: '/assets/logos/cosrx.svg', alt: 'COSRX', cls: '' },
+  { src: '/assets/logos/michelin.svg', alt: 'Michelin', cls: '' },
+  { src: '/assets/logos/zoom.svg', alt: 'ZOOM', cls: '' },
+  // Near-square mark rather than a wordmark, so at the shared 22px it reads far
+  // smaller than the names either side of it. 'lg' evens out the optical weight.
+  { src: '/assets/logos/ey.svg', alt: 'EY', cls: 'lg' },
   { src: '/assets/logos/microsoft.svg', alt: 'Microsoft', cls: '' },
   { src: '/assets/logos/aws.png', alt: 'AWS', cls: '' },
   { src: '/assets/logos/oracle.png', alt: 'Oracle', cls: '' },

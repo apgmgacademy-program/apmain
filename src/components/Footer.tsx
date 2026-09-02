@@ -17,6 +17,7 @@ export default function Footer({ route }: { route: Route }) {
         <nav className="footer-nav" aria-label="Footer">
           <a href="/about" data-edit-id="footer.nav.about" data-edit-key="nav.about">{t('nav.about')}</a>
           <a href={sectionHref(route, 'diadromi')} data-edit-id="footer.nav.journey" data-edit-key="nav.journey">{t('nav.journey')}</a>
+          <a href="/reviews" data-edit-id="footer.nav.reviews" data-edit-key="nav.reviews">{t('nav.reviews')}</a>
           <a href={sectionHref(route, 'programmata')} data-edit-id="footer.nav.programs" data-edit-key="nav.programs">{t('nav.programs')}</a>
           <a href={sectionHref(route, 'epikoinonia')} data-edit-id="footer.nav.contact" data-edit-key="nav.contact">{t('nav.contact')}</a>
         </nav>

@@ -6,15 +6,17 @@
     "programs": "Programs",
     "contact": "Contact",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "reviews": "Reviews",
+    "freeTraining": "Free training"
   },
   "hero": {
     "eyebrow": "Founder. Operator. Educator.",
-    "headLead": "V. Apollon Papas",
-    "headTail": "15+ years on the front line of Enterprise Growth. My purpose is to lead SMBs and Enterprises to the next step - always guided by the individual and the company's footprint.",
-    "sub": "Education that prepares businesses & teams for the real market.",
-    "ctaPrimary": "See the programs",
-    "ctaSecondary": "Contact",
+    "headLead": "The growth systems behind 17,539 trained executives,",
+    "headTail": "opened up to founders",
+    "sub": "I'm Apollon Papas. For 15 years I built growth systems with teams at Amazon, Samsung and EY and called them The Invisible Hand System. Now I teach founders and executives to run them without me.",
+    "ctaPrimary": "Save my free seat at PowerUp!",
+    "ctaSecondary": "See the programs",
     "trusted": "Trusted by"
   },
   "about": {
@@ -25,11 +27,28 @@
     "cta": "Read the full story",
     "portraitAlt": "Portrait of Apollon Papas",
     "stats": [
-      { "n": 15, "suffix": "+", "label": "Years of experience" },
-      { "n": 50, "suffix": "+", "label": "Publications" },
-      { "n": 9000, "suffix": "+", "label": "Training hours" },
-      { "n": 17539, "suffix": "", "label": "Executives and teams trained" }
-    ]
+      {
+        "n": 15,
+        "suffix": "+",
+        "label": "Years of experience"
+      },
+      {
+        "n": 50,
+        "suffix": "+",
+        "label": "Publications"
+      },
+      {
+        "n": 9000,
+        "suffix": "+",
+        "label": "Training hours"
+      },
+      {
+        "n": 17539,
+        "suffix": "",
+        "label": "Executives and teams trained"
+      }
+    ],
+    "canonicalBio": "Apollon (Apollo) Papas is a Greek business growth consultant and educator, and the founder of GYA Media Group (2017). He has delivered more than 9,000 hours of enterprise consulting and training to 17,539 executives, working with teams at Amazon, Samsung, SHEIN, Michelin, ZOOM and EY, and now teaches founders through structured execution programs."
   },
   "journey": {
     "title": "Journey",
@@ -49,7 +68,7 @@
       {
         "year": "2018-2022",
         "title": "Growth into international markets",
-        "body": "Expands across the Americas, Europe and the GCC. Integrates 4 companies in marketing, production and IT, builds GYA Media Group, takes on government and other projects in collaboration with Amazon, Samsung, SHEIN, COSRX, Michelin, ZOOM, EY. Builds sales systems, SOPs and marketing funnels. In 2019 he begins training teams in marketing and penetration, and brings the market its first Enterprise AI solutions together with Palantir Technologies and OpenAI."
+        "body": "Expands across the Americas, Europe and the GCC. Integrates 4 companies in marketing, production and IT, builds GYA Media Group, takes on government and other projects in collaboration with Amazon, Samsung, SHEIN, COSRX, Michelin, ZOOM, EY. Builds sales systems, SOPs and marketing funnels. In 2019 he begins training teams in marketing and market entry, and brings the market its first Enterprise AI solutions together with Palantir Technologies and OpenAI."
       },
       {
         "year": "2023-2025",
@@ -75,29 +94,33 @@
         "id": "sprint",
         "kicker": "6-Week Execution Sprint",
         "title": "From Chaos to Revenue",
-        "desc": "A work-along sprint designed to educate and lead founders to launch their product or service in under 6 weeks. Start from ideation, end up with a launched product and real clients to deal with.",
-        "status": "live"
+        "desc": "Launch your product in 6 weeks. A work-along sprint that takes founders from ideation to a launched product with real clients to deal with.",
+        "status": "live",
+        "tag": "Core program"
       },
       {
         "id": "powerup",
         "kicker": "Webinar",
         "title": "PowerUp!",
         "desc": "For busy founders who need clear Enterprise-grade frameworks to create and audit their current digital strategies and efforts, as well as build their first SOPs.",
-        "status": "free"
+        "status": "free",
+        "tag": "Start here · Free"
       },
       {
         "id": "mentorship",
         "kicker": "18-hour course",
         "title": "The Mentorship",
-        "desc": "A comprehensive 18-hour course for founders and executives leading teams of 10 to 500 people into a rocket launch. Restructure your mindset, hone your skills, learn new tools, and scale up your operations and efficiency. A programme born from 9,000+ hours of Enterprise consulting, made simple for smaller founders and executives who are looking to adapt their business and leading tactics to the new era of AI with upgraded processes, tools, and global reach.",
-        "status": "soon"
+        "desc": "Born from 9,000+ hours of enterprise consulting: a comprehensive 18-hour course for founders and executives leading teams of 10 to 500 people into a rocket launch. Restructure your mindset, hone your skills, learn new tools, and scale up your operations and efficiency. Made simple for smaller founders and executives who are looking to adapt their business and leading tactics to the new era of AI with upgraded processes, tools, and global reach.",
+        "status": "waitlist",
+        "tag": "Flagship"
       },
       {
         "id": "vault",
         "kicker": "Backed by GYA Media & Apollon Papas",
         "title": "The Founder VAULT",
-        "desc": "Online content most of the time is not valid or valuable. You find yourself reading AI-written articles, or posts and reels that do not provide true guidance and a clear path for execution. This hub is the result of 15 years of experience and the client-facing handouts my team and I have written and delivered in in-house trainings, client seminars, and how-to guides made for teams that needed an extra hand. All packed into a useful, immensely valuable vault that gives you direct access to agency knowledge: eBooks, workbooks, tool guides, PDF handouts, checklists, podcasts, interviews, and more.",
-        "status": "soon"
+        "desc": "15 years of client-facing agency knowledge in one place: eBooks, workbooks, tool guides, checklists, podcasts and how-to handouts my team wrote for real client teams. The written half of The Invisible Hand System.",
+        "status": "waitlist",
+        "tag": "Knowledge library"
       }
     ],
     "students": [
@@ -106,13 +129,18 @@
         "kicker": "4-week sprint",
         "title": "Career Readiness Sprint",
         "desc": "4 weeks of practical preparation for the job market.",
-        "status": "live"
+        "status": "live",
+        "tag": "Programme in Greek"
       }
-    ]
+    ],
+    "waitlist": "Waitlist",
+    "conversation": "By conversation"
   },
   "contact": {
     "title": "Contact",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "enterprise": "For enterprise consulting and in-house training, talk to GYA Media Group",
+    "webinar": "Want to see the system first? Join the free PowerUp! webinar"
   },
   "story": {
     "eyebrow": "Apollo's Story",
@@ -123,10 +151,10 @@
       "For fifteen years, working directly with founders and running my own companies at scale, I kept hearing the same sentence from the people around me: \"Apollo, just do your magic.\" At first it made me laugh, and I took it as flattery, the kind of thing busy people say when something gets handled and they would rather not ask how. But it kept happening, from different people, in different rooms, about completely different problems, until I finally realized they actually meant it. What they were describing was a kind of invisible hand, something that quietly organized what was chaotic, activated what was stuck, and moved the whole thing forward at a scale none of them had been able to reach on their own. This is the story of where that came from, and how, after fifteen years, I reverse-engineered it into something I can finally hand to someone else.",
       "I was born and raised in Athens, and I want to be honest with you from the very start, because this is exactly where most stories like mine reach for a wound that isn't there. I did not have a hard childhood, and claiming otherwise would be an insult to two parents who worked hard their entire lives so that my sister and I would never have to learn what going without felt like. There was a loving home, a good environment, private schooling, and more extracurriculars than I can reasonably list, from sports and chess to business competitions, astrophysics camps and math olympiads. Business was simply the air in that house, and not the polished version of it either, but the real thing, the late dinners and the networking and the legal disputes, the wins and the quiet losses, all of it discussed openly at the table. My father is an economist, a lawyer and an entrepreneur, and my mother is a renowned, award-winning crisis communications consultant, two people running hard at the top of their fields inside a house that never really stopped moving.",
       "They wanted us to choose a path, and that mattered to them, not their path necessarily, but a path, something to commit to and pursue with intent. By the time I was fourteen I had already started tasting theirs, working alongside my mother on light client work, close enough to the real thing to feel how it moved and what it demanded. And yet, when the moment came to choose for myself, I did not reach for business at all. I reached for the stars. Astrophysics pulled at me, a love of mathematics and physics aimed at the largest unknown we have, and my parents were glad to see it. They even did something generous with it and introduced me to working scientists, people genuinely surprised at how much a boy between twelve and seventeen already understood about physics. One of them, though, told me the truth in a way I have never managed to forget. He asked me to keep one thing in mind before I gave my life to any of it, because my daily reality, he explained, would be a telescope in the dark night after night, studying a sky that answers slowly, or a university lab where I would push theory forward with one or two assistants and almost no one else. That landed on me with a weight I did not expect, because I knew myself well enough to know it would never fit. I am an extrovert, and I am not even a night person. I love numbers and I love physics with everything I have, but I could not love a life spent mostly alone in the quiet, and pretending otherwise would have cost me far more than it ever gave back.",
-      "So, right before the national Baccalaureate exams, I turned. Not away from what I loved, but back toward something I had loved the entire time without ever naming it out loud, the numbers and the business and the people and the communication I had already been living at my mother's side for years. It did not feel like a defeat, it felt like finally recognizing where I had always been useful. I got into one of the country's top universities, and this is exactly where the assumption people make about me tends to fall apart, because they imagine my parents cleared the road ahead of me. They did not. They gave me advice, real advice, the kind you would pay a consultant for, but never the network, never the funding, never a single introduction. And then, one ordinary Tuesday morning, without warning or ceremony, my father cut my monthly allowance to zero. I resented it in the moment, and I am grateful for it now, because it forced me to build something of my own instead of quietly leaning on something of theirs.",
+      "So, right before the national Baccalaureate exams, I turned. Not away from what I loved, but back toward something I had loved the entire time without ever naming it out loud, the numbers and the business and the people and the communication I had already been living at my mother's side for years. It did not feel like a defeat, it felt like finally recognizing where I had always been useful. I got into The American College of Greece - DEREE, and this is exactly where the assumption people make about me tends to fall apart, because they imagine my parents cleared the road ahead of me. They did not. They gave me advice, real advice, the kind you would pay a consultant for, but never the network, never the funding, never a single introduction. And then, one ordinary Tuesday morning, without warning or ceremony, my father cut my monthly allowance to zero. I resented it in the moment, and I am grateful for it now, because it forced me to build something of my own instead of quietly leaning on something of theirs.",
       "What I built first was teaching. I started tutoring classmates, but I refused to do it the way most tutoring is done, as a shortcut that carries someone through an exam and leaves them empty on the other side. I taught them to genuinely understand the material, the point beneath the point, because I have always believed something simple: if a person is going to graduate with a title, they had better truly know what that title means and what they are supposed to be able to do with it once they carry it into the world. Passing was never the goal, knowing was. Maybe that is why the academic result I am actually proud of is not the five and more papers I published between nineteen and twenty-two, nor finishing at the top of my class, but the fact that I passed micro- and macroeconomics, courses that still carry an 82% failure rate, with an A+, and that I helped others pass them the very same way, through understanding rather than tricks. For years I could not explain why those two courses broke so many capable people, and I understand it completely now, because I have been in business since I was fourteen and I watch the reason play out every single day in our client and consulting work. Almost no one is taught to think in systems, and those courses quietly demand exactly that while never once saying so out loud.",
       "While I was still tutoring, I began working with small entrepreneurs and teams, helping them get organized, their files, their operations, their thinking, all of it finally put into order, and being the organized, tech-literate one in the room turned out to be worth far more than I ever expected. That work grew quietly until larger clients started to appear, and with them arrived a very practical problem, because they needed proper invoices. So, still at university, I started my own business, less out of ambition in that particular moment and more out of necessity, because the work had already outgrown what I could keep doing informally. From 2019 onward, my vision moved from the stars to the people for good, and my team and I began writing and educating clients at scale, not with opinions but with benchmarks and real, validated data, showing them exactly what we do and how a person becomes a stronger employee and a better leader when the guidance is grounded in numbers rather than motivation. That instinct to teach, the one that started with a handful of nervous classmates, had quietly become the center of everything I was building.",
-      "Since 2023 I have leaned harder into education itself, running enterprise-scale, in-house trainings for companies that wanted their people to actually grow rather than simply attend, and in 2024 I began building the work I am perhaps most obsessive about, a vast, agency-led knowledge library for businesses and entrepreneurs, more than 1,800 assets deep and still being built to this day, close to finished yet never quite there, because the standard keeps rising the further we go. And that brings me to now, and to why any of this should matter to you. For most of my career, the kind of thinking I have been describing has lived where it almost always lives, inside enterprises large enough to afford it and behind doors most people never get to walk through. I have spent fifteen years reverse-engineering the invisible hand my clients kept asking for, and I have decided it should not stay locked behind those doors any longer. What I want now is to open enterprise-level knowledge and enterprise-level action to everyone, in a form that is approachable, genuinely applicable from the earliest stage, and built for people who are serious about actually scaling. That invisible hand was never magic. It was a system, and a system can be taught, and that is precisely what the next six weeks are: everything I have learned, stripped down to what truly moves things forward, placed directly in your hands, not so you can watch me do my magic, but so you can finally learn to do your own."
+      "Since 2023 I have leaned harder into education itself, running enterprise-scale, in-house trainings for companies that wanted their people to actually grow rather than simply attend, and in 2024 I began building the work I am perhaps most obsessive about, a vast, agency-led knowledge library for businesses and entrepreneurs, more than 1,800 assets deep and still being built to this day, close to finished yet never quite there, because the standard keeps rising the further we go. And that brings me to now, and to why any of this should matter to you. For most of my career, the kind of thinking I have been describing has lived where it almost always lives, inside enterprises large enough to afford it and behind doors most people never get to walk through. I have spent fifteen years reverse-engineering the invisible hand my clients kept asking for, and I have decided it should not stay locked behind those doors any longer. What I want now is to open enterprise-level knowledge and enterprise-level action to everyone, in a form that is approachable, genuinely applicable from the earliest stage, and built for people who are serious about actually scaling. That invisible hand was never magic. It was a system, and a system can be taught, and that is precisely what the next six weeks are: everything I have learned, stripped down to what truly moves things forward, placed directly in your hands, not so you can watch me do my magic, but so you can finally learn to do your own. Today I teach it as The Invisible Hand System."
     ],
     "shotAlts": [
       "Apollon Papas recording a session at his desk",
@@ -141,10 +169,110 @@
     "ctaKicker": "Where this goes next",
     "ctaTitle": "From Chaos to Revenue",
     "ctaDesc": "The system behind the invisible hand, rebuilt as a six week execution sprint. Everything above, stripped down to what actually moves a business forward.",
-    "ctaButton": "See the 6 Week Sprint"
+    "ctaButton": "See the 6 Week Sprint",
+    "pullQuotes": [
+      {
+        "after": 1,
+        "text": "Business was simply the air in that house."
+      },
+      {
+        "after": 3,
+        "text": "I resented it in the moment, and I am grateful for it now."
+      },
+      {
+        "after": 4,
+        "text": "Passing was never the goal, knowing was."
+      },
+      {
+        "after": 5,
+        "text": "The magic was never magic. It was a system."
+      }
+    ],
+    "ctaAlt": "Not a founder yet? Start with the free PowerUp! webinar."
   },
   "footer": {
     "rights": "© {{from}}-{{to}} Apollon Papas",
     "tagline": "Founder, GYA Media Group"
+  },
+  "path": {
+    "title": "The path",
+    "lede": "Every program is a step in the same system. Start free.",
+    "steps": [
+      {
+        "id": "powerup",
+        "label": "Free · Start here",
+        "name": "PowerUp! webinar",
+        "line": "Live training. See the system working on real cases.",
+        "status": "free"
+      },
+      {
+        "id": "vault",
+        "label": "Knowledge library",
+        "name": "The Founder VAULT",
+        "line": "The written system: guides, workbooks, checklists.",
+        "status": "waitlist"
+      },
+      {
+        "id": "sprint",
+        "label": "Core",
+        "name": "From Chaos to Revenue",
+        "line": "6 weeks from idea to launched product with real clients.",
+        "status": "live"
+      },
+      {
+        "id": "mentorship",
+        "label": "Flagship",
+        "name": "The Mentorship",
+        "line": "18 hours for executives leading teams of 10 to 500.",
+        "status": "waitlist"
+      },
+      {
+        "id": "gya",
+        "label": "Enterprise",
+        "name": "GYA Media Group",
+        "line": "Done-with-you consulting and in-house training.",
+        "status": "conversation"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What participants say",
+    "lede": "From GYA Media trainings and workshops across 25+ countries.",
+    "showMore": "Show more reviews",
+    "all": "Read all 119 reviews"
+  },
+  "reviews": {
+    "eyebrow": "Reviews",
+    "title": "Every review, named and unedited",
+    "lede": "All 119 reviews from GYA Media trainings and workshops across 25+ countries, reproduced as they were written. The ones not in English are left in their original language.",
+    "regions": {
+      "Europe": "Europe",
+      "Middle East": "Middle East",
+      "Africa": "Africa",
+      "Americas": "Americas"
+    },
+    "count": "{{count}} reviews",
+    "back": "Back to apollonpapas.com"
+  },
+  "faq": {
+    "title": "Frequently asked",
+    "items": [
+      {
+        "q": "Who is Apollon Papas?",
+        "a": "Apollon (Apollo) Papas is a Greek business growth consultant and educator, and the founder of GYA Media Group (2017). He has delivered more than 9,000 hours of enterprise consulting and training to 17,539 executives, working with teams at Amazon, Samsung, SHEIN, Michelin, ZOOM and EY."
+      },
+      {
+        "q": "What is The Invisible Hand System?",
+        "a": "The Invisible Hand System is Apollon Papas's methodology for business growth: the enterprise-grade systems he built for large companies over 15 years, reverse-engineered into a teachable framework. Every program he runs delivers a part of it."
+      },
+      {
+        "q": "What programs does Apollon Papas offer?",
+        "a": "PowerUp!, a free live webinar for founders; From Chaos to Revenue, a 6-week execution sprint; The Mentorship, an 18-hour program for founders and executives leading teams of 10 to 500; The Founder VAULT, a knowledge library; and the Career Readiness Sprint for students."
+      },
+      {
+        "q": "How can I start working with Apollon Papas?",
+        "a": "Start with the free PowerUp! webinar at apollonpapas.com. Founders who want structured execution join From Chaos to Revenue; executive teams apply for The Mentorship; enterprises can work with GYA Media Group directly."
+      }
+    ]
   }
 }

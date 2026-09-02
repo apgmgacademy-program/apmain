@@ -11,10 +11,15 @@ import { PROGRAM_MEDIA, SITE, STORY_SHOTS } from '../config';
 // `story` block: Greek is paused, i18next falls back to en per key, and 1,500
 // words of untranslated English masquerading as a Greek translation would be
 // worse than the fallback. Translate it before flipping SITE.showLangToggle.
+// A line lifted out of the prose and set large, to break up 1,500 words of
+// unbroken column. `after` is the index of the paragraph it follows.
+type PullQuote = { after: number; text: string };
+
 export default function Story() {
   const { t } = useTranslation();
   const paragraphs = t('story.paragraphs', { returnObjects: true }) as string[];
   const alts = t('story.shotAlts', { returnObjects: true }) as string[];
+  const pullQuotes = t('story.pullQuotes', { returnObjects: true }) as PullQuote[];
   const sprint = PROGRAM_MEDIA.sprint;
 
   // One print after each paragraph, so they arrive at a steady rhythm on
@@ -41,7 +46,7 @@ export default function Story() {
           {t('story.eyebrow')}
         </span>
         <h1 className="display-xl story-title" data-edit-id="story.title" data-edit-key="story.titleLead">
-          {t('story.titleLead')}
+          {t('story.titleLead')}{' '}
           <span className="head-tail" data-edit-id="story.title-tail" data-edit-key="story.titleTail">
             {t('story.titleTail')}
           </span>
@@ -94,6 +99,18 @@ export default function Story() {
                   </figure>
                 );
               })}
+              {pullQuotes
+                .filter((q) => q.after === i)
+                .map((q) => (
+                  <p
+                    className="story-pull display-font"
+                    key={q.text}
+                    data-edit-id={`story.pull-${i}`}
+                    data-edit-key={`story.pullQuotes.${pullQuotes.indexOf(q)}.text`}
+                  >
+                    {q.text}
+                  </p>
+                ))}
             </div>
           ))}
         </div>
@@ -127,6 +144,14 @@ export default function Story() {
           </span>
         </div>
       </a>
+
+      {/* HANDOFF 5.10: the not-ready-yet door, beside the sprint card. A plain
+          link - /about is a brand route and captures nothing. */}
+      <p className="story-cta-alt" data-reveal="" data-edit-id="story.cta-alt" data-edit-key="story.ctaAlt">
+        <a href={SITE.webinarUrl}>
+          {t('story.ctaAlt')} <span aria-hidden="true">→</span>
+        </a>
+      </p>
     </section>
   );
 }

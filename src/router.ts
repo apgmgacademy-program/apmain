@@ -2,11 +2,16 @@ import { useEffect, useState } from 'react';
 
 // apollonpapas.com is one origin serving several independent builds. nginx
 // mounts /fromchaostorevenue, /webinar-powerup and the legal stack from the 6WS
-// build, and falls back to THIS app's index.html for anything else
-// (`try_files $uri $uri/ /index.html`). So /about needs no server change, but
-// the click handler below must only ever intercept paths this app actually
-// owns. Anything not in ROUTES is left to the browser and reaches nginx.
-export const ROUTES = ['/', '/about'] as const;
+// build, and falls back to THIS app for anything else. The click handler below
+// must only ever intercept paths this app actually owns; anything not in ROUTES
+// is left to the browser and reaches nginx.
+//
+// Every route here is now prerendered to its own directory index
+// (scripts/prerender.mjs), so nginx must keep the `$uri/` term in
+// `try_files $uri $uri/ /index.html`. Without it /about and /reviews fall
+// through to the home page's HTML and the whole site serves one title and one
+// canonical. See docs/deploy-nginx.md.
+export const ROUTES = ['/', '/about', '/reviews'] as const;
 export type Route = (typeof ROUTES)[number];
 
 function owns(pathname: string): pathname is Route {
@@ -26,8 +31,14 @@ export function sectionHref(route: Route, id: string): string {
   return route === '/' ? `#${id}` : `/#${id}`;
 }
 
-export function useRoute(): Route {
-  const [route, setRoute] = useState<Route>(() => normalize(window.location.pathname));
+// `ssrRoute` is what the prerender passes in: there is no window in Node, and
+// the route is already known from the file being written. On the client the
+// prop is absent and the pathname is read as before, which is the same value
+// the server rendered, so hydration matches.
+export function useRoute(ssrRoute?: Route): Route {
+  const [route, setRoute] = useState<Route>(
+    () => ssrRoute ?? (typeof window === 'undefined' ? '/' : normalize(window.location.pathname))
+  );
 
   useEffect(() => {
     const onPop = () => setRoute(normalize(window.location.pathname));

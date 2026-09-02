@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { SITE, AURORA_PALETTE, TOKEN_TEXT, TOKEN_DIM, TOKEN_FAINT, TRUSTED_LOGOS } from '../config';
 import { prefersReducedMotion } from '../hooks/useScrollMotion';
+import { trackCtaClick } from '../lib/analytics';
 
 function Aurora() {
   return (
@@ -123,25 +124,42 @@ export default function Hero() {
           <span data-edit-id="home.hero.eyebrow" data-edit-key="hero.eyebrow">{t('hero.eyebrow')}</span>
         </div>
 
+        {/* HANDOFF 5.1: the H1 is the headline and nothing else. It used to
+            swallow the subheadline too, which left extractors with one glued
+            block of text and no usable page heading. The two spans are a single
+            approved sentence split for the display-size lead/tail rhythm, so
+            the H1's text content still reads exactly as written. */}
         <h1 className="display-xl display-font js-headline">
           <span className="head-line" data-edit-id="home.hero.headline-lead" data-edit-key="hero.headLead">
             {t('hero.headLead')}
-            <span className={'gold-dot' + (SITE.goldDot ? '' : ' off')} data-edit-id="home.hero.headline-dot" data-edit-source="src/components/Hero.tsx">.</span>
-          </span>
-          <span className="head-line head-tail" style={{ color: tailColor }} data-edit-id="home.hero.headline-tail" data-edit-key="hero.headTail">
+          </span>{' '}
+          <span className="head-line head-dim" style={{ color: tailColor }} data-edit-id="home.hero.headline-tail" data-edit-key="hero.headTail">
             {words.map((w, i) => (
               <Fragment key={i18n.language + '-' + i}>
                 <span className="tw">{w}</span>
                 {i < words.length - 1 ? ' ' : ''}
               </Fragment>
             ))}
+            <span className={'gold-dot' + (SITE.goldDot ? '' : ' off')} data-edit-id="home.hero.headline-dot" data-edit-source="src/components/Hero.tsx">.</span>
           </span>
         </h1>
 
         <p className="hero-sub body-l js-sub" data-edit-id="home.hero.sub" data-edit-key="hero.sub">{t('hero.sub')}</p>
 
         <div className="ctas js-ctas">
-          <a className="btn btn-ghost" href="#epikoinonia" data-edit-id="home.hero.cta-secondary" data-edit-key="hero.ctaSecondary">{t('hero.ctaSecondary')}</a>
+          {/* HANDOFF Part 6: an engagement click, deliberately NOT a conversion.
+              Conversion events belong to the programme pages and their own
+              funnels; nothing on a brand route may fire one. */}
+          <a
+            className="btn btn-primary"
+            href={SITE.webinarUrl}
+            onClick={() => trackCtaClick('powerup_hero')}
+            data-edit-id="home.hero.cta-primary"
+            data-edit-key="hero.ctaPrimary"
+          >
+            {t('hero.ctaPrimary')}
+          </a>
+          <a className="btn btn-ghost" href="#programmata" data-edit-id="home.hero.cta-secondary" data-edit-key="hero.ctaSecondary">{t('hero.ctaSecondary')}</a>
         </div>
 
         <div className="trusted js-trusted">

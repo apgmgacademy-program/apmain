@@ -62,6 +62,13 @@ export default function About() {
   return (
     <section className="section" id="sxetika" data-screen-label="About" data-edit-section="about">
       <h2 className="display-l display-font" data-reveal="" data-edit-id="home.about.title" data-edit-key="about.title">{t('about.title')}</h2>
+      {/* HANDOFF 5.1: the canonical bio, verbatim, as the first block of prose
+          under the hero. It is the paragraph the Person schema, llms.txt and the
+          /reviews header all repeat, so an extractor gets the same sentence
+          whichever surface it reads. Deliberately plain text, no markup inside. */}
+      <p className="about-canonical body-l" data-reveal="" data-edit-id="home.about.canonical-bio" data-edit-key="about.canonicalBio">
+        {t('about.canonicalBio')}
+      </p>
       <div className="about-card" data-reveal="">
         <div className="about-left">
           <div className="about-role">

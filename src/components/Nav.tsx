@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { SITE } from '../config';
 import { sectionHref, type Route } from '../router';
 import ProgramsMenu from './ProgramsMenu';
+import { trackCtaClick } from '../lib/analytics';
 
 // Matches the width where the CSS swaps the inline links for the menu button.
 const MOBILE = '(max-width: 720px)';
@@ -81,10 +82,28 @@ export default function Nav({ route }: { route: Route }) {
         >
           {t('nav.journey')}
         </a>
+        {/* Its own page, like About: 119 named reviews is a destination, not a
+            section to scroll past. */}
+        <a
+          href="/reviews"
+          className={route === '/reviews' ? 'active' : ''}
+          {...(edit ? { 'data-edit-id': 'nav.links.reviews', 'data-edit-key': 'nav.reviews' } : {})}
+        >
+          {t('nav.reviews')}
+        </a>
         {/* Programs is a dropdown rather than an anchor: the section has two
             audience bands and five destinations, and the nav can offer them
             directly instead of dropping you at the top to scan. */}
         <ProgramsMenu route={route} open={programsOpen} setOpen={setProgramsOpen} variant={variant} />
+        {/* Contact moved out of the right-hand pill and in here. It is the
+            weakest thing a cold visitor can be offered (audit F4), so it reads
+            as one destination among several rather than the page's main ask. */}
+        <a
+          href={sectionHref(route, 'epikoinonia')}
+          {...(edit ? { 'data-edit-id': 'nav.links.contact', 'data-edit-key': 'nav.contact' } : {})}
+        >
+          {t('nav.contact')}
+        </a>
       </>
     );
   };
@@ -102,7 +121,19 @@ export default function Nav({ route }: { route: Route }) {
               <button type="button" className={lang === 'en' ? 'active' : ''} onClick={() => i18n.changeLanguage('en')} data-edit-id="nav.lang.en">EN</button>
             </div>
           ) : null}
-          <a className="btn btn-ghost btn-sm nav-cta" href={sectionHref(route, 'epikoinonia')} data-edit-id="nav.cta.contact" data-edit-key="nav.contact">{t('nav.contact')}</a>
+          {/* Audit F15/F25: the free webinar is the front-end offer and the
+              default action for anyone not ready to buy, so it owns the nav's
+              one pill. "Free training" says what it is; a Programs dropdown
+              entry does not. */}
+          <a
+            className="btn btn-primary btn-sm nav-cta"
+            href={SITE.webinarUrl}
+            onClick={() => trackCtaClick('powerup_nav')}
+            data-edit-id="nav.cta.webinar"
+            data-edit-key="nav.freeTraining"
+          >
+            {t('nav.freeTraining')}
+          </a>
           <button
             type="button"
             className={'nav-toggle' + (open ? ' open' : '')}
@@ -132,7 +163,9 @@ export default function Nav({ route }: { route: Route }) {
           }}
         >
           {links('panel')}
-          <a className="btn btn-ghost nav-panel-cta" href={sectionHref(route, 'epikoinonia')}>{t('nav.contact')}</a>
+          <a className="btn btn-primary nav-panel-cta" href={SITE.webinarUrl} onClick={() => trackCtaClick('powerup_nav')}>
+            {t('nav.freeTraining')}
+          </a>
         </div>
       </div>
     </nav>

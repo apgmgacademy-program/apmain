@@ -4,8 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "npm run build:reviews && vite",
+    "build": "npm run build:reviews && tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
+    "build:reviews": "node scripts/build-reviews.mjs",
     "preview": "vite preview",
     "verify:edit-tags": "node scripts/verify-edit-tags.mjs"
   },

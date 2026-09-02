@@ -6,6 +6,9 @@ export const STATUS_CHIP: Record<Program['status'], string> = {
   live: 'chip chip-live',
   free: 'chip chip-live',
   soon: 'chip',
+  // Waitlist is open but there is nowhere to send anyone yet, so it reads as a
+  // state rather than an invitation: no gold, no link. See HANDOFF 5.4.
+  waitlist: 'chip chip-waitlist',
 };
 
 function ProgramCard({ p, group, reveal }: { p: Program; group: string; reveal: boolean }) {
@@ -61,9 +64,18 @@ function ProgramCard({ p, group, reveal }: { p: Program; group: string; reveal: 
         <p className="product-desc" data-edit-id={`home.programs.${p.id}-desc`} data-edit-key={editKey('desc')}>
           {p.desc}
         </p>
-        <span className={STATUS_CHIP[p.status]} data-edit-id={`home.programs.${p.id}-status`} data-edit-key={`programs.${p.status}`}>
-          {t(`programs.${p.status}`)}
-        </span>
+        <div className="product-chips">
+          <span className={STATUS_CHIP[p.status]} data-edit-id={`home.programs.${p.id}-status`} data-edit-key={`programs.${p.status}`}>
+            {t(`programs.${p.status}`)}
+          </span>
+          {/* Ladder label (5.4). Quieter than the status chip on purpose: it
+              says where the program sits in the path, not whether it is open. */}
+          {p.tag ? (
+            <span className="chip chip-tag" data-edit-id={`home.programs.${p.id}-tag`} data-edit-key={editKey('tag')}>
+              {p.tag}
+            </span>
+          ) : null}
+        </div>
       </div>
     </Tag>
   );

@@ -26,9 +26,16 @@ i18n.use(initReactI18next).init({
   interpolation: { escapeValue: false },
 });
 
+// The prerender (scripts/prerender.mjs) imports this module in Node, where
+// there is no document: the per-route <title> is written into the HTML template
+// there instead, so on the server this is simply a no-op.
 function syncDocument(lng: string) {
+  if (typeof document === 'undefined') return;
   document.documentElement.lang = lng;
-  document.title = lng === 'el' ? 'Απόλλων Παπάς' : 'Apollon Papas';
+  // Only the fallback title is owned here. Prerendered routes ship their own
+  // <title> (src/seo.ts) and must keep it, so EN never overwrites it; a switch
+  // to Greek still relabels the tab.
+  if (lng === 'el') document.title = 'Απόλλων Παπάς';
   try {
     localStorage.setItem('ap-lang', lng);
   } catch {

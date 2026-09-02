@@ -393,9 +393,19 @@
 
   .hero h1 {
     margin-top: 1.75rem;
-    max-width: 19ch;
+    /* Was 19ch, sized for a three-word name. The approved headline is a full
+       sentence (HANDOFF 5.1), so the measure is set for it: wide enough to
+       break into three or four display lines, never one long ribbon. */
+    max-width: 24ch;
   }
-  .head-line { display: block; }
+  /* Each line of the H1 is its own block, so balance evens out the wrap within
+     each sentence rather than leaving a single orphaned word on the last line.
+     .display-xl uses `pretty`, which only guards the last line and is the right
+     default for longer headings; this one is two short sentences. */
+  .head-line { display: block; text-wrap: balance; }
+  /* The H1's second line. It is display-size like the first, unlike .head-tail
+     below, which is the small dimmed subtitle the /about title still uses. */
+  .head-dim { color: var(--text-dim); }
   .head-tail {
     color: var(--text-dim);
     font-size: clamp(1.15rem, 2.1vw, 1.65rem);
@@ -409,7 +419,10 @@
 
   .hero-sub {
     margin-top: 1.5rem;
-    max-width: 46ch;
+    /* Was 46ch, which broke this paragraph into four short lines against a wide
+       empty right half of the hero. 66ch is still inside the comfortable range
+       for a lead paragraph at this size and lets it read as two or three lines. */
+    max-width: 66ch;
     color: var(--text-dim);
   }
 
@@ -1025,14 +1038,25 @@
 
   /* ============ Contact ============ */
   .contact { overflow: hidden; }
+  /* A band running the full width of the section, like the hero's. It used to
+     be a centred 700px square, and because .aurora-grain is a hard-edged rect
+     filling the wrap, the square itself was visible as a lighter box with two
+     vertical seams. The wrap now overhangs the section on every side and is
+     masked to nothing before it reaches an edge, so only the glow shows. */
   .contact-aurora {
-    top: -40%;
-    right: auto;
-    left: 50%;
-    width: min(50vw, 700px);
-    margin-left: calc(min(50vw, 700px) / -2);
+    inset: -35% -10%;
+    width: auto;
+    height: auto;
+    aspect-ratio: auto;
+    margin-left: 0;
     opacity: 0.22;
+    -webkit-mask-image: radial-gradient(ellipse 62% 58% at 50% 50%, black 35%, transparent 76%);
+    mask-image: radial-gradient(ellipse 62% 58% at 50% 50%, black 35%, transparent 76%);
   }
+  /* Spread the two warm blobs across the band so the light travels left to
+     right rather than pooling in the middle. */
+  .contact .aurora-blob.b-gold   { inset: 16% 54% 26% 8%; }
+  .contact .aurora-blob.b-orange { inset: 20% 10% 22% 48%; }
   .contact-inner {
     position: relative;
     z-index: 2;
@@ -1136,7 +1160,10 @@
     .journey-list { padding-left: 1.5rem; }
     .journey-item { padding: 1.4rem 1.5rem; }
     .journey-item::before { left: -24px; }
-    .contact-aurora { width: 90vw; margin-left: -45vw; }
+    /* The desktop rule is already a full-bleed masked band; the old override
+       here re-introduced a fixed-width box (and its visible grain rectangle)
+       on phones. Only the vertical overhang needs easing at this size. */
+    .contact-aurora { inset: -20% -12%; width: auto; margin-left: 0; }
     /* Five overlapping prints cannot survive a phone width, so the pile
        becomes a swipeable row of upright photos. */
     .gallery-scatter {
@@ -1172,3 +1199,390 @@
     object-fit: cover;
     display: block;
   }
+
+  /* ==========================================================================
+     HANDOFF Part 5 sections: the canonical bio, the path ladder, testimonials,
+     the /reviews page, the FAQ and the contact routing links. Everything below
+     uses the tokens declared at the top of this file - no new colors, radii or
+     type sizes were introduced for it.
+     ========================================================================== */
+
+  /* ============ Canonical bio (5.1) ============ */
+  /* Sits between the About heading and the card. Wider measure than body copy
+     because it is one dense factual paragraph, not something to read at length. */
+  .about-canonical {
+    color: var(--text-dim);
+    max-width: 74ch;
+    margin-bottom: 2rem;
+    text-wrap: pretty;
+  }
+
+  /* ============ The path (5.5) ============ */
+  .path-lede { color: var(--text-dim); max-width: 52ch; margin: -1.25rem 0 2.25rem; }
+
+  .path-track {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.75rem;
+    align-items: end;
+    list-style: none;
+    padding: 0 0 0.5rem;
+  }
+  /* The ascent. Each step is lifted a little further than the one before it, so
+     the ladder reads as rising before a single word of it is read. */
+  .path-step { transform: translateY(calc(var(--step) * -14px)); }
+
+  .path-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    height: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    padding: 1.1rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  /* Only the three steps that have somewhere to go react to the pointer. The
+     VAULT and Mentorship cards are deliberately inert until their pages exist. */
+  .path-card--link:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+
+  .path-num {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .path-label { color: var(--text-faint); }
+  .path-name { font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.01em; }
+  .path-line { color: var(--text-dim); font-size: 0.9375rem; line-height: 1.5; }
+  /* Chips line up along the bottom of the row whatever the copy length does. */
+  .path-card .chip { margin-top: auto; }
+
+  /* ============ Chips added in 5.4 ============ */
+  .product-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+  .product-card:not(.product-card--wide) .product-body .product-chips { margin-top: auto; }
+  /* Open, but with nowhere to send anyone yet: a state, not an invitation, so
+     it stays off the gold that means "you can start this today". */
+  .chip-waitlist {
+    background: color-mix(in srgb, var(--text) 8%, transparent);
+    color: var(--text-dim);
+  }
+  /* The ladder label. Quieter still - it locates the program in the path. */
+  .chip-tag { background: transparent; border: 1px solid var(--border); color: var(--text-faint); }
+
+  /* ============ Testimonials (5.6) ============ */
+  .testimonials-lede { color: var(--text-dim); max-width: 52ch; margin: -1.25rem 0 2.25rem; }
+
+  .review-featured {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    /* Cards size to their own copy. Stretching every card to the tallest in its
+       row put a void the height of a paragraph inside the two short quotes,
+       because the attribution is pinned to the bottom. Ragged bottoms read as
+       intentional here; a bordered box with a hole in it does not. */
+    align-items: start;
+  }
+  /* The wall is a real masonry column flow rather than a grid: the reviews are
+     wildly uneven in length and a grid would leave ragged holes under the short
+     ones. */
+  .review-wall {
+    columns: 3;
+    column-gap: 1rem;
+    margin-top: 1rem;
+  }
+  .review-wall .review-card {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  /* The homepage wall runs as a vertical stream. /reviews keeps .review-wall
+     above, where a static masonry of all 119 is the right thing. */
+  .review-stream {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: clamp(1.5rem, 3vh, 2.25rem);
+    /* Carries the whole section now, so it gets the height to show two or three
+       cards per column at once rather than slivers. */
+    height: clamp(520px, 72vh, 780px);
+    overflow: hidden;
+    /* Fades the cards out at both ends so the loop has no visible entry or
+       exit edge, only quotes drifting through. */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 11%, black 89%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 11%, black 89%, transparent 100%);
+  }
+  /* Hover, focus and drag act on one column at a time, so the cursor and the
+     dragging state live here rather than on the whole stream. */
+  .review-stream-col { min-height: 0; cursor: grab; }
+  .review-stream-col.is-dragging { cursor: grabbing; user-select: none; }
+  .review-stream-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    will-change: transform;
+  }
+
+  .review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-card);
+    padding: 1.25rem;
+    transition: border-color 0.2s ease;
+  }
+  .review-card:hover { border-color: var(--border-strong); }
+  .review-quote {
+    color: var(--text);
+    opacity: 0.9;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+  .review-by { display: flex; flex-direction: column; gap: 0.15rem; margin-top: auto; }
+  .review-name { font-weight: 600; font-size: 0.9375rem; }
+  .review-meta { color: var(--text-faint); font-size: 0.8125rem; line-height: 1.4; }
+
+  .testimonials-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+  /* The expander only exists at the narrow breakpoint, where the wall is
+     collapsed. Above it the whole wall is already visible. */
+  .review-more { display: none; }
+  .review-all { color: var(--gold); font-weight: 600; font-size: 0.9375rem; }
+  .review-all:hover { color: var(--gold-soft); }
+
+  /* ============ /reviews page (5.6) ============ */
+  .reviews-page { position: relative; }
+  .reviews-head {
+    position: relative;
+    z-index: 2;
+    max-width: 62ch;
+    margin: 0 auto clamp(2.5rem, 7vh, 4rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reviews-title { margin-top: 1.5rem; font-size: clamp(2.25rem, 5vw, 3.75rem); }
+  .reviews-lede { margin-top: 1.5rem; color: var(--text-dim); }
+  /* The canonical bio again, set smaller here: it is reference matter for an
+     extractor rather than something a visitor needs to read twice. */
+  .reviews-bio {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  .reviews-region + .reviews-region { margin-top: clamp(2.5rem, 6vh, 4rem); }
+  .reviews-region-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .reviews-region-head h2 { margin-bottom: 0; }
+  .reviews-count { color: var(--text-faint); }
+  .reviews-foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: clamp(2.5rem, 7vh, 4rem);
+  }
+
+  /* ============ FAQ (5.8) ============ */
+  .faq-list {
+    border-top: 1px solid var(--border);
+    /* Spans the section like the About card, the program grid and the review
+       grid above it. Capped at 76ch it was the only block on the page stopping
+       short of the others, which read as unfinished rather than considered.
+       The answer keeps its own reading measure below. */
+  }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.15rem 0;
+    font-weight: 600;
+    font-size: 1.0625rem;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.2s ease;
+  }
+  .faq-q::-webkit-details-marker { display: none; }
+  .faq-q:hover { color: var(--gold); }
+  /* A plus that becomes a minus. Two pseudo-element bars rather than a glyph,
+     so it stays optically centred at any size. */
+  .faq-mark {
+    position: relative;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+  }
+  .faq-mark::before,
+  .faq-mark::after {
+    content: '';
+    position: absolute;
+    inset: 50% 0 auto 0;
+    height: 1.5px;
+    background: var(--text-dim);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .faq-mark::after { transform: rotate(90deg); }
+  .faq-item[open] .faq-mark::after { transform: rotate(90deg) scaleX(0); opacity: 0; }
+  /* While the close is animating the item is still [open], so this puts the
+     plus back immediately instead of a beat after the panel has gone. */
+  .faq-item.is-closing .faq-mark::after { transform: rotate(90deg) scaleX(1); opacity: 1; }
+  /* Height is animated on this wrapper rather than on the answer itself, so
+     the padding collapses with it and there is no jump at the end. */
+  .faq-panel { overflow: hidden; }
+  /* The row goes full width; the answer does not. Prose set to 1136px would be
+     roughly 130 characters a line, which is well past the point where the eye
+     loses the return sweep. */
+  .faq-a {
+    color: var(--text-dim);
+    max-width: 72ch;
+    padding-bottom: 1.35rem;
+    text-wrap: pretty;
+  }
+
+  /* ============ Contact routing links (5.9) ============ */
+  .contact-routes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 2rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--border);
+  }
+  .contact-route { color: var(--text-dim); font-size: 0.9375rem; }
+  .contact-route a { transition: color 0.2s ease; }
+  .contact-route a:hover { color: var(--gold); }
+
+  /* ============ Story additions (5.10) ============ */
+  .story-pull {
+    margin: 2.25rem 0;
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--gold);
+    font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--text);
+    text-wrap: balance;
+  }
+  .story-cta-alt {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9375rem;
+  }
+  .story-cta-alt a:hover { color: var(--gold); }
+
+  /* ============ Responsive (Part 8 asks for a clean 390px pass) ============ */
+  @media (max-width: 1000px) {
+    .review-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .review-wall { columns: 2; }
+    .review-stream { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 860px) {
+    /* Five steps will not fit, so the ladder becomes its own scroll container
+       rather than pushing the page sideways. The ascent is dropped with it: a
+       rise you have to scroll to see is just misalignment. */
+    .path-track {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(230px, 78vw);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      /* Bleed to the section edges so the row reads as scrollable. */
+      margin-inline: -2rem;
+      padding-inline: 2rem;
+    }
+    .path-track::-webkit-scrollbar { display: none; }
+    .path-step { transform: none; scroll-snap-align: start; }
+  }
+
+  @media (max-width: 720px) {
+    .review-featured { grid-template-columns: minmax(0, 1fr); }
+    .review-wall { columns: 1; }
+    /* Twelve extra cards would bury the FAQ and the contact section on a phone,
+       so the wall collapses behind the expander. The markup is always in the
+       DOM, so a crawler still reads all eighteen. */
+    .review-wall { display: none; }
+    .review-wall.is-open { display: block; }
+    /* No stream on a phone: a vertical auto-scroller inside a vertically
+       scrolling page fights the visitor for the same gesture. It collapses to
+       the same stacked list the wall used to be, behind the same expander. */
+    /* No stream on a phone, but it must not be hidden outright either or the
+       section would open with no testimonials at all. One column, capped, and
+       the expander lifts the cap. */
+    .review-stream {
+      grid-template-columns: minmax(0, 1fr);
+      height: auto;
+      max-height: 880px;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
+    }
+    .review-stream.is-open {
+      max-height: none;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+    .review-stream-col { cursor: auto; }
+    .review-stream.is-open { display: grid; }
+    .review-more { display: inline-flex; }
+    .reviews-region-head { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .path-card,
+    .review-card,
+    .faq-mark::before,
+    .faq-mark::after { transition: none; }
+    /* The stream never animates here, so the overflow that the loop relies on
+       would simply swallow most of the cards. Hand it back as a scroll box. */
+    .review-stream {
+      overflow-y: auto;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+    .review-stream-col { cursor: auto; }
+  }
+
+  /* ============ Publication links on the Journey card (audit F12) ============ */
+  /* Hidden entirely until PUBLICATIONS has entries; see src/config.ts. */
+  .journey-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--border);
+  }
+  .journey-links a {
+    color: var(--text-dim);
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+  }
+  .journey-links a:hover { color: var(--gold); }
+  .journey-link-outlet { color: var(--text-faint); }

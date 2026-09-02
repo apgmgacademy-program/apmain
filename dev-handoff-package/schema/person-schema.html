@@ -1,0 +1,68 @@
+<!--
+  Paste this verbatim into the <head> of apollonpapas.com's "/" route,
+  replacing the current thin Person-only JSON-LD.
+  See HANDOFF.md Part 3 for context and the matching visible FAQ section (5.8)
+  this schema's FAQPage block must match word for word.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://apollonpapas.com/#apollon",
+      "name": "Apollon Papas",
+      "alternateName": ["Apollo Papas", "Απόλλων Παπάς"],
+      "url": "https://apollonpapas.com/",
+      "image": "https://apollonpapas.com/images/apollo-portrait.jpg",
+      "jobTitle": "Business Growth Consultant and Educator",
+      "description": "Apollon (Apollo) Papas is a Greek business growth consultant and educator, founder of GYA Media Group (2017). He has delivered more than 9,000 hours of enterprise consulting and training to 17,539 executives, working with teams at Amazon, Samsung, SHEIN, Michelin, ZOOM and EY, and now teaches founders through structured execution programs.",
+      "worksFor": { "@id": "https://apollonpapas.com/#gya" },
+      "nationality": { "@type": "Country", "name": "Greece" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "The American College of Greece - DEREE" },
+      "knowsAbout": ["Business growth strategy", "B2B lead generation",
+        "Marketing systems", "Executive training",
+        "Standard operating procedures", "Enterprise AI adoption"],
+      "sameAs": [
+        "https://www.linkedin.com/in/apollonpapas/",
+        "https://www.gya-media.com/"
+      ],
+      "email": "hello@apollonpapas.com"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://apollonpapas.com/#gya",
+      "name": "GYA Media Group",
+      "url": "https://www.gya-media.com/",
+      "foundingDate": "2017",
+      "founder": { "@id": "https://apollonpapas.com/#apollon" }
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://apollonpapas.com/",
+      "name": "Apollon Papas",
+      "publisher": { "@id": "https://apollonpapas.com/#apollon" }
+    },
+    {
+      "@type": "Course",
+      "name": "From Chaos to Revenue",
+      "description": "A 6-week execution sprint for founders: from idea to a launched product with real clients.",
+      "provider": { "@id": "https://apollonpapas.com/#apollon" },
+      "url": "https://apollonpapas.com/fromchaostorevenue"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Who is Apollon Papas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Apollon (Apollo) Papas is a Greek business growth consultant and educator, and the founder of GYA Media Group (2017). He has delivered more than 9,000 hours of enterprise consulting and training to 17,539 executives, working with teams at Amazon, Samsung, SHEIN, Michelin, ZOOM and EY." } },
+        { "@type": "Question", "name": "What is The Invisible Hand System?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Invisible Hand System is Apollon Papas's methodology for business growth: the enterprise-grade systems he built for large companies over 15 years, reverse-engineered into a teachable framework. Every program he runs delivers a part of it." } },
+        { "@type": "Question", "name": "What programs does Apollon Papas offer?",
+          "acceptedAnswer": { "@type": "Answer", "text": "PowerUp!, a free live webinar for founders; From Chaos to Revenue, a 6-week execution sprint; The Mentorship, an 18-hour program for founders and executives leading teams of 10 to 500; The Founder VAULT, a knowledge library; and the Career Readiness Sprint for students." } },
+        { "@type": "Question", "name": "How can I start working with Apollon Papas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Start with the free PowerUp! webinar at apollonpapas.com. Founders who want structured execution join From Chaos to Revenue; executive teams apply for The Mentorship; enterprises can work with GYA Media Group directly." } }
+      ]
+    }
+  ]
+}
+</script>

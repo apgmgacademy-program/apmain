@@ -1,0 +1,954 @@
+[
+  {
+    "id": 1,
+    "name": "Nikos Anagnostou",
+    "role": "Managing Partner",
+    "company": "Ionian Precision Castings SA",
+    "country": "Greece",
+    "review": "Honestly I went into the workshop thinking I already knew our market. Two days later I was rewriting our pricing sheet on the train home. What stuck with me wasn't the slides, it was Apollo pushing back on why we were scared to raise prices in the first place. 27 years in the business and nobody had ever asked me that directly."
+  },
+  {
+    "id": 2,
+    "name": "Sabine Hoffmann",
+    "role": "Head of Sales",
+    "company": "Nordwald Maschinenbau GmbH",
+    "country": "Germany",
+    "review": "Very structured, very practical, no fluff. We got a repeatable process for entering the Austrian market that my team could actually use the following Monday, not just a nice story."
+  },
+  {
+    "id": 3,
+    "name": "Tomasz Wiśniewski",
+    "role": "Regional Team Lead",
+    "company": "Karpatia Logistics Sp. z o.o.",
+    "country": "Poland",
+    "review": "What I found most useful was honestly the belief part more than the tactics. Our whole regional team walked in thinking expansion into Romania was too risky and left the session actually arguing about which city to launch in first. The GYA team also stayed an extra hour after to go through our actual numbers with us, which nobody expected."
+  },
+  {
+    "id": 4,
+    "name": "Youssef Al Mansoori",
+    "role": "CEO",
+    "company": "Desert Bridge Trading LLC",
+    "country": "United Arab Emirates",
+    "review": "I have sat through many consultants over the years, most of them talk in circles. Apollo was direct, sometimes too direct for some of the older people in the room, but that is exactly what we needed. The framework on reframing what our team believed was possible in new markets, that alone changed how we planned our Saudi entry."
+  },
+  {
+    "id": 5,
+    "name": "Ngozi Eze",
+    "role": "Operations Director",
+    "company": "Lagos Prime Foods Ltd",
+    "country": "Nigeria",
+    "review": "The scaling operations module was the one that hit hardest for us. We had been doing things the same way for 8 years because it worked when we were smaller. Apollo's team showed us where that same process was actually costing us. Also appreciated that they followed up by email after with a summary, a lot of trainers just disappear once the invoice is paid."
+  },
+  {
+    "id": 6,
+    "name": "Eleni Konstantinou",
+    "role": "HR Director",
+    "company": "Delphi Retail Group",
+    "country": "Greece",
+    "review": "What stayed with me was the part about how we talk to our own staff, not just customers. We changed our onboarding process within two weeks of the session and turnover already looks better this quarter."
+  },
+  {
+    "id": 7,
+    "name": "Yannis Michailidis",
+    "role": "Founder",
+    "company": "Michailidis Marine Supplies",
+    "country": "Greece",
+    "review": "I run a small supply business, third generation, and I was sure this training would be for bigger companies than mine. It wasn't. The pricing conversation alone paid for the whole thing twice over."
+  },
+  {
+    "id": 8,
+    "name": "Katerina Papageorgiou",
+    "role": "Marketing Manager",
+    "company": "Olympos Dairy Co",
+    "country": "Greece",
+    "review": "Good energy, practical exercises, not just theory. My favorite part was rebuilding our messaging around what customers actually care about instead of what we assumed they cared about."
+  },
+  {
+    "id": 9,
+    "name": "Christos Antoniou",
+    "role": "Managing Director",
+    "company": "Aegean Freight Solutions",
+    "country": "Greece",
+    "review": "At my age I did not expect to change how I think about the business, but here we are. Apollo has a way of asking one simple question that unravels years of assumptions."
+  },
+  {
+    "id": 10,
+    "name": "Foteini Karagianni",
+    "role": "Team Lead",
+    "company": "Attica Software Services",
+    "country": "Greece",
+    "review": "The session on team buy-in was the one my colleagues still bring up in meetings. We finally have language for conversations we were avoiding for months."
+  },
+  {
+    "id": 11,
+    "name": "Vasilis Stavridis",
+    "role": "CEO",
+    "company": "Stavridis Construction Group",
+    "country": "Greece",
+    "review": "Direct, no nonsense, and refreshingly honest about what actually works versus what sounds good in a seminar. My only complaint is I wish we had done this five years earlier."
+  },
+  {
+    "id": 12,
+    "name": "Maria Ioannidou",
+    "role": "Operations Manager",
+    "company": "Cycladic Tourism Partners",
+    "country": "Greece",
+    "review": "Seasonal business like ours has a hard time thinking long term. The GYA team helped us build an actual off season plan instead of just surviving until summer again."
+  },
+  {
+    "id": 13,
+    "name": "Dimitra Nikolaou",
+    "role": "Regional Sales Manager",
+    "company": "Thermaikos Packaging",
+    "country": "Greece",
+    "review": "Some parts felt slow for my taste but the negotiation framework was worth sitting through everything else. Used it twice already with new clients."
+  },
+  {
+    "id": 14,
+    "name": "Petros Vlachos",
+    "role": "Co-Founder",
+    "company": "Vlachos Bros Hospitality",
+    "country": "Greece",
+    "review": "My brother and I have run this business together for 15 years and argue about everything. This was maybe the first time in years we agreed on something after a workshop."
+  },
+  {
+    "id": 15,
+    "name": "Markus Weber",
+    "role": "Managing Director",
+    "company": "Weber Antriebstechnik GmbH",
+    "country": "Germany",
+    "review": "Very structured, which I appreciated. What I took away most was a clear process for testing new markets before committing real budget to them."
+  },
+  {
+    "id": 16,
+    "name": "Anja Richter",
+    "role": "Head of HR",
+    "company": "Richter Logistik AG",
+    "country": "Germany",
+    "review": "I was sent by my director expecting another generic leadership seminar. This was more specific and more useful than that, especially the part on changing team habits without a big announcement."
+  },
+  {
+    "id": 17,
+    "name": "Stefan Braun",
+    "role": "Sales Director",
+    "company": "Braun Industriearmaturen GmbH",
+    "country": "Germany",
+    "review": "Practical over theoretical, which matters to me. The market entry checklist is now actually pinned above my desk."
+  },
+  {
+    "id": 18,
+    "name": "Julia Neumann",
+    "role": "Regional Manager",
+    "company": "Neumann Fenstertechnik",
+    "country": "Germany",
+    "review": "Honestly some sessions ran long but the core framework on customer objections changed how our whole regional team handles calls now."
+  },
+  {
+    "id": 19,
+    "name": "Thomas Lehmann",
+    "role": "Founder",
+    "company": "Lehmann Fördertechnik",
+    "country": "Germany",
+    "review": "I have been running this company for almost 30 years and rarely sit through training without checking my phone. I did not check my phone once during this one."
+  },
+  {
+    "id": 20,
+    "name": "Katarzyna Nowak",
+    "role": "Marketing Director",
+    "company": "Baltic Steel Trading",
+    "country": "Poland",
+    "review": "What surprised me was how much of it was about mindset rather than tactics. We changed our whole approach to how we present ourselves to Western European buyers."
+  },
+  {
+    "id": 21,
+    "name": "Marek Zieliński",
+    "role": "Operations Manager",
+    "company": "Zielinski Foods Sp. z o.o.",
+    "country": "Poland",
+    "review": "Good mix of practical tools and honest talk about fear of failure. The exercise on pricing confidence was uncomfortable in a good way."
+  },
+  {
+    "id": 22,
+    "name": "Agnieszka Kowalczyk",
+    "role": "Team Lead",
+    "company": "Silesia Auto Parts",
+    "country": "Poland",
+    "review": "My team was skeptical at first, some of them older than me and set in their ways. By the end they were the ones asking the most questions."
+  },
+  {
+    "id": 23,
+    "name": "Piotr Lewandowski",
+    "role": "CEO",
+    "company": "Lewandowski Construction Group",
+    "country": "Poland",
+    "review": "We needed a push to expand outside our region and kept finding reasons not to. This training gave us an actual plan instead of more reasons to wait."
+  },
+  {
+    "id": 24,
+    "name": "Magdalena Dąbrowska",
+    "role": "Regional Sales Manager",
+    "company": "Warsaw Textile Exports",
+    "country": "Poland",
+    "review": "Some parts I already knew from other trainings but the storytelling piece for sales calls was new to me and it works better than I expected."
+  },
+  {
+    "id": 25,
+    "name": "Fatima Al Suwaidi",
+    "role": "Head of Marketing",
+    "company": "Gulf Horizon Real Estate",
+    "country": "United Arab Emirates",
+    "review": "I appreciated that this was not just American style motivation talk. It was grounded, practical, and respectful of how business actually gets done here."
+  },
+  {
+    "id": 26,
+    "name": "Omar Khalifa",
+    "role": "Managing Director",
+    "company": "Falcon Bay Logistics",
+    "country": "United Arab Emirates",
+    "review": "We brought in Apollo's team for our regional leads across three offices. The session on decision making under pressure was the standout for our operations managers."
+  },
+  {
+    "id": 27,
+    "name": "Layla Haddad",
+    "role": "Operations Director",
+    "company": "Emirates Fresh Produce Trading",
+    "country": "United Arab Emirates",
+    "review": "Fast paced, a lot packed into two days. What stuck was the framework for scaling without losing quality control, which is exactly our problem right now."
+  },
+  {
+    "id": 28,
+    "name": "Rashid Al Balushi",
+    "role": "CEO",
+    "company": "Palm Coast Hospitality Group",
+    "country": "United Arab Emirates",
+    "review": "I have attended trainings in London, in Dubai, in Riyadh. This was more direct than most of them and less concerned with sounding impressive."
+  },
+  {
+    "id": 29,
+    "name": "Chinedu Okafor",
+    "role": "Managing Director",
+    "company": "Okafor Building Materials",
+    "country": "Nigeria",
+    "review": "We deal with a lot of uncertainty in this market and the training helped us build systems that do not fall apart when things change suddenly, which they always do here."
+  },
+  {
+    "id": 30,
+    "name": "Amaka Nwosu",
+    "role": "Head of Sales",
+    "company": "Delta Fashion Exports",
+    "country": "Nigeria",
+    "review": "What I found most useful was the confidence piece, honestly. My sales team stopped underselling ourselves to foreign buyers after this."
+  },
+  {
+    "id": 31,
+    "name": "Emeka Obi",
+    "role": "Founder",
+    "company": "Obi Tech Solutions",
+    "country": "Nigeria",
+    "review": "I run a small tech company and was not sure this training was built for us, it felt more built for manufacturing or trading businesses. Still got a lot out of the market positioning session."
+  },
+  {
+    "id": 32,
+    "name": "Funmilayo Adeyemi",
+    "role": "Regional Manager",
+    "company": "Adeyemi Agro Processing",
+    "country": "Nigeria",
+    "review": "The team building exercises felt slow to me at first but by day two I understood the point. Our supervisors communicate completely differently now with the floor staff."
+  },
+  {
+    "id": 33,
+    "name": "Rachel Miller",
+    "role": "VP of Sales",
+    "company": "Cascade Home Furnishings",
+    "country": "United States",
+    "review": "I've sat through a lot of sales trainings that are basically the same deck with different logos. This wasn't that. The objection handling stuff we use every single day now."
+  },
+  {
+    "id": 34,
+    "name": "James Carter",
+    "role": "Founder",
+    "company": "Carter Outdoor Equipment",
+    "country": "United States",
+    "review": "Started this company out of my garage 12 years ago and I still learned things I wish I knew back then. Good ROI on the two days honestly."
+  },
+  {
+    "id": 35,
+    "name": "Brian Coleman",
+    "role": "Operations Director",
+    "company": "Lonestar Fabrication Co",
+    "country": "United States",
+    "review": "Blunt, no corporate fluff, which is rare. My favorite part was the section on why most operational fixes fail, we were doing three of those things wrong."
+  },
+  {
+    "id": 36,
+    "name": "Amanda Torres",
+    "role": "Marketing Director",
+    "company": "Sunrise Wellness Group",
+    "country": "United States",
+    "review": "Some of it felt geared more toward international expansion than our situation but the messaging framework alone was worth attending for."
+  },
+  {
+    "id": 37,
+    "name": "Kevin O'Brien",
+    "role": "Managing Partner",
+    "company": "O'Brien & Sons Roofing",
+    "country": "United States",
+    "review": "Family business, three generations now, and getting my father to change how he thinks about pricing has been basically impossible for years. This training did it in an afternoon."
+  },
+  {
+    "id": 38,
+    "name": "Michelle Adams",
+    "role": "COO",
+    "company": "Bright Path Financial Services",
+    "country": "United States",
+    "review": "Sharp, well organized, respected our time. The framework on scaling operations without losing service quality is something we are still implementing a month later."
+  },
+  {
+    "id": 39,
+    "name": "David Chen",
+    "role": "Founder",
+    "company": "Chen Family Restaurants",
+    "country": "United States",
+    "review": "I run four locations and hiring good managers has always been my biggest headache. The leadership piece of this training directly addressed that and gave me an actual process."
+  },
+  {
+    "id": 40,
+    "name": "Lisa Novak",
+    "role": "Regional Sales Manager",
+    "company": "Great Lakes Packaging",
+    "country": "United States",
+    "review": "Not going to lie, first hour I thought this would be another rah rah session. It wasn't, it got specific fast and stayed specific."
+  },
+  {
+    "id": 41,
+    "name": "Robert Jennings",
+    "role": "CEO",
+    "company": "Jennings Industrial Supply",
+    "country": "United States",
+    "review": "58 years old and I still learned something about how I talk to my own management team. That alone made the trip worth it."
+  },
+  {
+    "id": 42,
+    "name": "Stephanie Ruiz",
+    "role": "Head of Growth",
+    "company": "Ruiz Digital Marketing",
+    "country": "United States",
+    "review": "Good energy from the whole GYA team, felt like they actually cared whether we implemented anything instead of just running the session and leaving."
+  },
+  {
+    "id": 43,
+    "name": "Oliver Hughes",
+    "role": "Managing Director",
+    "company": "Hughes Precision Engineering",
+    "country": "United Kingdom",
+    "review": "Refreshingly straightforward. A lot of trainers over here dress things up more than they need to. This one just told us what was actually wrong with our sales process."
+  },
+  {
+    "id": 44,
+    "name": "Charlotte Bennett",
+    "role": "Head of Sales",
+    "company": "Bennett & Clarke Insurance Brokers",
+    "country": "United Kingdom",
+    "review": "The role play exercises felt awkward at first, as they always do, but the negotiation framework has already paid off with two renewals this month."
+  },
+  {
+    "id": 45,
+    "name": "James Whitfield",
+    "role": "Founder",
+    "company": "Whitfield Joinery Ltd",
+    "country": "United Kingdom",
+    "review": "Small business, just me and eleven staff, and I wondered if this was built for companies much bigger than mine. It translated fine actually."
+  },
+  {
+    "id": 46,
+    "name": "Sophie Barker",
+    "role": "Operations Manager",
+    "company": "Barker Logistics UK",
+    "country": "United Kingdom",
+    "review": "Practical over inspirational, which I prefer. Took the process mapping exercise straight back to my team the following week."
+  },
+  {
+    "id": 47,
+    "name": "Daniel Sinclair",
+    "role": "CEO",
+    "company": "Sinclair Home Interiors",
+    "country": "United Kingdom",
+    "review": "What stood out was how much time was spent on the psychology of why teams resist change rather than just telling us to change. That framing stuck with me."
+  },
+  {
+    "id": 48,
+    "name": "Emily Foster",
+    "role": "Regional Manager",
+    "company": "Foster Fresh Foods",
+    "country": "United Kingdom",
+    "review": "Good mix of structure and honesty. The bit on pricing courage was uncomfortable to sit through but exactly what our regional managers needed to hear."
+  },
+  {
+    "id": 49,
+    "name": "Carlos Fernández",
+    "role": "Director Comercial",
+    "company": "Fernández Aceites del Sur",
+    "country": "Spain",
+    "review": "Llevamos generaciones vendiendo aceite de la misma manera y esta formación nos hizo cuestionar cosas que dábamos por hechas desde hace años. Muy útil, sobre todo la parte de precios."
+  },
+  {
+    "id": 50,
+    "name": "Laura Martínez",
+    "role": "Directora de Marketing",
+    "company": "Martínez Textiles SL",
+    "country": "Spain",
+    "review": "Lo que más me sirvió fue el trabajo sobre cómo contar la historia de la marca en mercados nuevos. Fue directo, sin rodeos, y aplicable desde el primer día."
+  },
+  {
+    "id": 51,
+    "name": "Javier Ruiz",
+    "role": "Fundador",
+    "company": "Ruiz Construcciones Mediterráneo",
+    "country": "Spain",
+    "review": "Al principio pensé que sería otra charla motivacional más. No lo fue. El marco para entrar en nuevos mercados regionales nos ahorró meses de errores."
+  },
+  {
+    "id": 52,
+    "name": "Beatriz Gómez",
+    "role": "Gerente Regional",
+    "company": "Gómez Distribución Alimentaria",
+    "country": "Spain",
+    "review": "Some sessions were more relevant than others for our sector, but the piece on team confidence during expansion was exactly what my regional leads needed."
+  },
+  {
+    "id": 53,
+    "name": "Alberto Serrano",
+    "role": "CEO",
+    "company": "Serrano Muebles y Diseño",
+    "country": "Spain",
+    "review": "Direct, sometimes uncomfortably so, but that is what a business my age needed. We had gotten too comfortable and it showed."
+  },
+  {
+    "id": 54,
+    "name": "Cristina Navarro",
+    "role": "Team Lead",
+    "company": "Navarro Logística Ibérica",
+    "country": "Spain",
+    "review": "My team came in tired after a long quarter and skeptical about sitting through more training. By the second day they were the ones taking notes."
+  },
+  {
+    "id": 55,
+    "name": "Marco Rossi",
+    "role": "Amministratore Delegato",
+    "company": "Rossi Meccanica Precisione",
+    "country": "Italy",
+    "review": "Diretto e concreto, senza troppa teoria. La parte sulla definizione dei prezzi per i mercati esteri è quella che uso ancora oggi con il mio team commerciale."
+  },
+  {
+    "id": 56,
+    "name": "Giulia Ferrari",
+    "role": "Direttrice Marketing",
+    "company": "Ferrari Tessuti Italiani",
+    "country": "Italy",
+    "review": "What I found most useful honestly was permission to say no to certain clients that were costing us more than they were worth. Nobody had ever framed it that way before."
+  },
+  {
+    "id": 57,
+    "name": "Alessandro Bruno",
+    "role": "Fondatore",
+    "company": "Bruno Vini e Distillati",
+    "country": "Italy",
+    "review": "Azienda di famiglia, quarta generazione, e cambiare il modo di pensare di mio padre riguardo ai nuovi mercati sembrava impossibile. Con questa formazione ci siamo riusciti in due giorni."
+  },
+  {
+    "id": 58,
+    "name": "Francesca Greco",
+    "role": "Responsabile Operativo",
+    "company": "Greco Logistica Sud",
+    "country": "Italy",
+    "review": "Some parts moved faster than I would have liked but the operational scaling framework is something my whole team still references in meetings."
+  },
+  {
+    "id": 59,
+    "name": "Luca Romano",
+    "role": "Direttore Commerciale",
+    "company": "Romano Arredamenti",
+    "country": "Italy",
+    "review": "Onesto, pratico, e senza troppi giri di parole. Il modulo sulla gestione delle obiezioni dei clienti ha cambiato subito il modo in cui il mio team gestisce le trattative."
+  },
+  {
+    "id": 60,
+    "name": "Pierre Lefevre",
+    "role": "Directeur Général",
+    "company": "Lefevre Matériaux de Construction",
+    "country": "France",
+    "review": "Je m'attendais à une formation classique et motivante sans plus. Ce qui m'a le plus marqué, c'est le travail concret sur la tarification face à la concurrence étrangère."
+  },
+  {
+    "id": 61,
+    "name": "Camille Dubois",
+    "role": "Responsable Marketing",
+    "company": "Dubois Cosmétiques Naturels",
+    "country": "France",
+    "review": "Direct et sans détour, ce qui change des formations habituelles. Le module sur le positionnement de marque a immédiatement changé notre façon de communiquer."
+  },
+  {
+    "id": 62,
+    "name": "Julien Moreau",
+    "role": "Fondateur",
+    "company": "Moreau Vignobles",
+    "country": "France",
+    "review": "Entreprise familiale depuis trois générations, et convaincre mon père de changer nos méthodes a toujours été difficile. Cette formation a réussi là où j'avais échoué pendant des années."
+  },
+  {
+    "id": 63,
+    "name": "Sophie Bernard",
+    "role": "Directrice des Opérations",
+    "company": "Bernard Textile Export",
+    "country": "France",
+    "review": "Some of the content felt more suited to bigger teams than ours but the piece on decision making under pressure was genuinely useful for our management group."
+  },
+  {
+    "id": 64,
+    "name": "Nicolas Petit",
+    "role": "Chef d'équipe régional",
+    "company": "Petit Logistique Atlantique",
+    "country": "France",
+    "review": "Franchement je pensais perdre mon temps les deux premières heures. Ensuite le cadre sur la confiance commerciale a changé la façon dont toute mon équipe aborde les nouveaux clients."
+  },
+  {
+    "id": 65,
+    "name": "Willem de Vries",
+    "role": "Managing Director",
+    "company": "de Vries Handelsonderneming",
+    "country": "Netherlands",
+    "review": "Direct and to the point, which we appreciate here. The framework for entering new export markets without overextending was the most valuable part for us."
+  },
+  {
+    "id": 66,
+    "name": "Anna Bakker",
+    "role": "Head of Sales",
+    "company": "Bakker Bloemen Export",
+    "country": "Netherlands",
+    "review": "Good energy, practical exercises. What stuck with me was the reframe on why our team was afraid to raise prices with long term clients."
+  },
+  {
+    "id": 67,
+    "name": "Jeroen Visser",
+    "role": "Founder",
+    "company": "Visser Technische Installaties",
+    "country": "Netherlands",
+    "review": "I run a small technical installation company and honestly did not expect much from another training day. The section on team accountability changed how we run our weekly meetings now."
+  },
+  {
+    "id": 68,
+    "name": "Femke Jansen",
+    "role": "Operations Manager",
+    "company": "Jansen Logistiek Nederland",
+    "country": "Netherlands",
+    "review": "Some parts were a bit generic for our specific logistics challenges but the scaling framework was solid and we have already applied parts of it."
+  },
+  {
+    "id": 69,
+    "name": "António Costa",
+    "role": "Diretor Geral",
+    "company": "Costa Cortiças de Portugal",
+    "country": "Portugal",
+    "review": "Negócio de família há décadas e mudar a forma como pensamos sobre mercados novos parecia impossível. Esta formação abriu portas que achávamos fechadas há anos."
+  },
+  {
+    "id": 70,
+    "name": "Mariana Silva",
+    "role": "Diretora de Marketing",
+    "company": "Silva Têxteis do Norte",
+    "country": "Portugal",
+    "review": "O que mais me ajudou foi a parte sobre como contar a nossa história para compradores internacionais. Simples, direto, e já estamos a aplicar."
+  },
+  {
+    "id": 71,
+    "name": "Rui Fernandes",
+    "role": "Fundador",
+    "company": "Fernandes Vinhos do Douro",
+    "country": "Portugal",
+    "review": "Achei que seria mais uma formação motivacional sem grande utilidade prática. Enganei-me, o módulo sobre preços mudou como negociamos com distribuidores estrangeiros."
+  },
+  {
+    "id": 72,
+    "name": "Beatriz Oliveira",
+    "role": "Gerente Regional",
+    "company": "Oliveira Distribuição Alimentar",
+    "country": "Portugal",
+    "review": "Some sessions dragged a little for my taste but the team confidence piece was exactly what my regional supervisors needed to hear."
+  },
+  {
+    "id": 73,
+    "name": "Andrei Popescu",
+    "role": "Director General",
+    "company": "Popescu Utilaje Agricole",
+    "country": "Romania",
+    "review": "Ne așteptam la o formare clasică, motivațională și fără prea multă aplicabilitate practică. Partea despre extinderea pe piețe noi a fost exact ce ne trebuia."
+  },
+  {
+    "id": 74,
+    "name": "Ioana Dumitrescu",
+    "role": "Marketing Manager",
+    "company": "Dumitrescu Mobilier SRL",
+    "country": "Romania",
+    "review": "What helped most was the honest talk about why our team kept avoiding difficult client conversations. Simple framework but it actually works."
+  },
+  {
+    "id": 75,
+    "name": "Mihai Constantin",
+    "role": "Fondator",
+    "company": "Constantin Panificație",
+    "country": "Romania",
+    "review": "Afacere de familie de peste 20 de ani, iar tatăl meu era convins că nimic din partea asta nu ni se aplică nouă. Până la finalul zilei doi era el cel care punea cele mai multe întrebări."
+  },
+  {
+    "id": 76,
+    "name": "Elena Radu",
+    "role": "Team Lead Regional",
+    "company": "Radu Logistics SRL",
+    "country": "Romania",
+    "review": "Some parts felt aimed at bigger companies than ours but the pricing confidence exercise alone was worth attending for."
+  },
+  {
+    "id": 77,
+    "name": "Abdullah Al Otaibi",
+    "role": "Managing Director",
+    "company": "Najd Building Materials",
+    "country": "Saudi Arabia",
+    "review": "We have grown quickly the past few years and our systems have not kept up. The operational scaling framework addressed exactly that gap for us."
+  },
+  {
+    "id": 78,
+    "name": "Noura Al Harbi",
+    "role": "Head of Marketing",
+    "company": "Hijaz Fashion Trading",
+    "country": "Saudi Arabia",
+    "review": "Direct and practical, more than I expected. The positioning work for entering new regional markets was the part my whole marketing team still references."
+  },
+  {
+    "id": 79,
+    "name": "Faisal Al Dosari",
+    "role": "CEO",
+    "company": "Red Sea Logistics Group",
+    "country": "Saudi Arabia",
+    "review": "I have brought in trainers before who spent most of the time telling us what we wanted to hear. This was more honest about where our operations were actually weak."
+  },
+  {
+    "id": 80,
+    "name": "Reem Al Qahtani",
+    "role": "Operations Manager",
+    "company": "Riyadh Fresh Foods",
+    "country": "Saudi Arabia",
+    "review": "Some sessions ran longer than needed but the framework on team accountability during rapid growth was genuinely useful for our supervisors."
+  },
+  {
+    "id": 81,
+    "name": "Ahmed Fathy",
+    "role": "General Manager",
+    "company": "Nile Delta Textiles",
+    "country": "Egypt",
+    "review": "What stayed with me most was the pricing session, honestly. We had been underpricing our exports for years out of fear of losing clients and did not even realize it."
+  },
+  {
+    "id": 82,
+    "name": "Mona Hassan",
+    "role": "Marketing Director",
+    "company": "Hassan Home Appliances",
+    "country": "Egypt",
+    "review": "Practical, direct, no wasted time. The messaging framework changed how we present our brand to distributors outside Egypt."
+  },
+  {
+    "id": 83,
+    "name": "Karim El Sayed",
+    "role": "Founder",
+    "company": "El Sayed Furniture Works",
+    "country": "Egypt",
+    "review": "Family business for three generations and my father was skeptical about the whole thing. He ended up being the most engaged person in the room by day two."
+  },
+  {
+    "id": 84,
+    "name": "Yasmin Adel",
+    "role": "Regional Sales Lead",
+    "company": "Adel Agro Exports",
+    "country": "Egypt",
+    "review": "Some of it felt generic in the first hour but the objection handling framework for international buyers has already helped close two deals."
+  },
+  {
+    "id": 85,
+    "name": "James Mwangi",
+    "role": "Managing Director",
+    "company": "Mwangi Tea Traders",
+    "country": "Kenya",
+    "review": "Good mix of practical tools and honest conversation about fear of raising prices with long standing buyers. We changed our export pricing the following week."
+  },
+  {
+    "id": 86,
+    "name": "Grace Wanjiru",
+    "role": "Head of Operations",
+    "company": "Wanjiru Fresh Produce Ltd",
+    "country": "Kenya",
+    "review": "What I found most useful was the framework for scaling without losing quality, which is our exact challenge as we grow into new counties."
+  },
+  {
+    "id": 87,
+    "name": "Peter Otieno",
+    "role": "Founder",
+    "company": "Otieno Construction Supplies",
+    "country": "Kenya",
+    "review": "I have attended a few business trainings over the years and this was more grounded in real numbers than most, less generic motivation talk."
+  },
+  {
+    "id": 88,
+    "name": "Faith Njeri",
+    "role": "Regional Manager",
+    "company": "Njeri Logistics Kenya",
+    "country": "Kenya",
+    "review": "Some sessions moved fast for my team but the team accountability piece has already changed how our regional supervisors run their weekly check ins."
+  },
+  {
+    "id": 89,
+    "name": "Johan van der Merwe",
+    "role": "Managing Director",
+    "company": "van der Merwe Agri Exports",
+    "country": "South Africa",
+    "review": "Straightforward and grounded in actual numbers, not just theory. The market entry framework saved us from a costly mistake we were about to make in a new region."
+  },
+  {
+    "id": 90,
+    "name": "Thandeka Nkosi",
+    "role": "Head of Marketing",
+    "company": "Nkosi Fashion House",
+    "country": "South Africa",
+    "review": "What helped most was the honest talk about why our team avoided difficult pricing conversations with retailers. Simple shift but it changed our margins."
+  },
+  {
+    "id": 91,
+    "name": "Pieter Botha",
+    "role": "Founder",
+    "company": "Botha Steel Works",
+    "country": "South Africa",
+    "review": "Family business, second generation, and I was skeptical this would apply to a manufacturing operation like ours. It did, more than I expected."
+  },
+  {
+    "id": 92,
+    "name": "Nomvula Dlamini",
+    "role": "Operations Manager",
+    "company": "Dlamini Logistics Group",
+    "country": "South Africa",
+    "review": "Some parts felt aimed at bigger operations but the scaling framework and team accountability piece were both genuinely useful for us."
+  },
+  {
+    "id": 93,
+    "name": "Ivan Petrov",
+    "role": "Managing Director",
+    "company": "Petrov Textile Exports",
+    "country": "Bulgaria",
+    "review": "We had grown used to competing only on price with Western European buyers. The positioning work in this training gave us another way to compete that we had not considered."
+  },
+  {
+    "id": 94,
+    "name": "Elena Georgieva",
+    "role": "Marketing Manager",
+    "company": "Georgieva Foods AD",
+    "country": "Bulgaria",
+    "review": "Honest and practical, not the usual motivational fluff. The messaging framework has already changed how we present our products to foreign distributors."
+  },
+  {
+    "id": 95,
+    "name": "Nikolay Dimitrov",
+    "role": "Founder",
+    "company": "Dimitrov Furniture Works",
+    "country": "Bulgaria",
+    "review": "I run a small furniture business and was not sure this training was built for a company our size. It translated well and the pricing session alone was worth attending."
+  },
+  {
+    "id": 96,
+    "name": "Tomáš Novák",
+    "role": "Jednatel",
+    "company": "Novák Strojírenství",
+    "country": "Czech Republic",
+    "review": "Přímé a bez zbytečných řečí, což oceňuji. Část o cenové odvaze při vstupu na nové trhy byla přesně to, co náš tým potřeboval slyšet."
+  },
+  {
+    "id": 97,
+    "name": "Petra Svobodová",
+    "role": "Marketing ředitelka",
+    "company": "Svoboda Textil",
+    "country": "Czech Republic",
+    "review": "What helped most was the honest conversation about why our sales team avoided pricing conversations with long term clients. We changed our approach the following week."
+  },
+  {
+    "id": 98,
+    "name": "Jakub Dvořák",
+    "role": "Zakladatel",
+    "company": "Dvořák Nábytek",
+    "country": "Czech Republic",
+    "review": "Rodinná firma tři generace a přesvědčit otce ke změně přístupu byl vždy problém. Tady se to povedlo za jedno odpoledne."
+  },
+  {
+    "id": 99,
+    "name": "Nikola Jovanović",
+    "role": "Managing Director",
+    "company": "Jovanović Metalna Industrija",
+    "country": "Serbia",
+    "review": "Direktno i bez suvišnih priča, što nam je odgovaralo. Deo o cenovnoj strategiji za izvozna tržišta bio je najkorisniji za naš tim."
+  },
+  {
+    "id": 100,
+    "name": "Milica Petrović",
+    "role": "Marketing Manager",
+    "company": "Petrović Tekstil",
+    "country": "Serbia",
+    "review": "What stuck with me most was the framework for telling our brand story to buyers outside the region. Simple but it actually changed how we pitch."
+  },
+  {
+    "id": 101,
+    "name": "Aleksandar Simić",
+    "role": "Founder",
+    "company": "Simić Logistika",
+    "country": "Serbia",
+    "review": "Mala firma, samo ja i osam zaposlenih, i nisam bio siguran da je ova obuka namenjena nama. Ispostavilo se da jeste, i to mnogo više nego što sam očekivao."
+  },
+  {
+    "id": 102,
+    "name": "Mahmoud Qasem",
+    "role": "General Manager",
+    "company": "Amman Steel Trading",
+    "country": "Jordan",
+    "review": "Direct and grounded in real numbers rather than motivational talk. The pricing framework alone changed how our sales team negotiates with regional buyers."
+  },
+  {
+    "id": 103,
+    "name": "Rana Khoury",
+    "role": "Marketing Director",
+    "company": "Khoury Fashion House",
+    "country": "Jordan",
+    "review": "What helped most was the positioning work for entering markets outside Jordan. My whole marketing team still references it in planning meetings."
+  },
+  {
+    "id": 104,
+    "name": "Sami Nasser",
+    "role": "Founder",
+    "company": "Nasser Agro Industries",
+    "country": "Jordan",
+    "review": "Family business for over 20 years and my father was doubtful the whole approach would apply to us. By the second day he was the one asking the most questions."
+  },
+  {
+    "id": 105,
+    "name": "Georges Abou Khalil",
+    "role": "Managing Director",
+    "company": "Abou Khalil Food Distribution",
+    "country": "Lebanon",
+    "review": "Practical and honest, not the usual seminar fluff. The team accountability framework changed how our regional supervisors run their weekly meetings."
+  },
+  {
+    "id": 106,
+    "name": "Nadine Chami",
+    "role": "Head of Marketing",
+    "company": "Chami Textiles",
+    "country": "Lebanon",
+    "review": "What stayed with me most was the messaging work for reaching buyers outside our usual markets. Direct, simple, and already applied."
+  },
+  {
+    "id": 107,
+    "name": "Elie Karam",
+    "role": "Founder",
+    "company": "Karam Furniture Exports",
+    "country": "Lebanon",
+    "review": "I have sat through a lot of business seminars over the years that sound good and change nothing. This one gave us an actual pricing framework we still use."
+  },
+  {
+    "id": 108,
+    "name": "Youssef Benali",
+    "role": "Managing Director",
+    "company": "Benali Textiles Export",
+    "country": "Morocco",
+    "review": "Direct and grounded in real examples rather than theory. The pricing courage session changed how our export team negotiates with European buyers."
+  },
+  {
+    "id": 109,
+    "name": "Sanaa El Amrani",
+    "role": "Marketing Manager",
+    "company": "El Amrani Argan Cooperative",
+    "country": "Morocco",
+    "review": "What helped most was learning how to tell our story to buyers who know nothing about where our products actually come from. Simple shift, big impact on our sales conversations."
+  },
+  {
+    "id": 110,
+    "name": "Karim Chraibi",
+    "role": "Founder",
+    "company": "Chraibi Construction Group",
+    "country": "Morocco",
+    "review": "Entreprise familiale depuis longtemps et convaincre mon équipe de changer nos méthodes de tarification semblait impossible. Cette formation a réussi là où d'autres avaient échoué."
+  },
+  {
+    "id": 111,
+    "name": "Kwame Asante",
+    "role": "Managing Director",
+    "company": "Asante Cocoa Traders",
+    "country": "Ghana",
+    "review": "What stuck with me most was the pricing session. We had been undervaluing our product for years to keep buyers happy and never questioned it until now."
+  },
+  {
+    "id": 112,
+    "name": "Abena Mensah",
+    "role": "Head of Operations",
+    "company": "Mensah Fashion Exports",
+    "country": "Ghana",
+    "review": "Practical and direct, more useful than I expected walking in. The scaling framework is something my whole operations team still references."
+  },
+  {
+    "id": 113,
+    "name": "Kofi Boateng",
+    "role": "Founder",
+    "company": "Boateng Construction Ltd",
+    "country": "Ghana",
+    "review": "I run a mid sized construction company and was not sure this would translate to our sector. It did, especially the team accountability piece."
+  },
+  {
+    "id": 114,
+    "name": "Andreas Georgiou",
+    "role": "Managing Director",
+    "company": "Georgiou Shipping Services",
+    "country": "Cyprus",
+    "review": "Direct, practical, and respectful of everyone's time, which is rare. The market positioning framework helped us rethink how we approach clients outside Cyprus."
+  },
+  {
+    "id": 115,
+    "name": "Maria Christodoulou",
+    "role": "Marketing Manager",
+    "company": "Christodoulou Foods Ltd",
+    "country": "Cyprus",
+    "review": "What I found most useful was the honest talk about pricing fear. We changed our export pricing structure the following month and it held up fine."
+  },
+  {
+    "id": 116,
+    "name": "Costas Papadopoulos",
+    "role": "Founder",
+    "company": "Papadopoulos Real Estate Group",
+    "country": "Cyprus",
+    "review": "I have been in this business for almost 25 years and still learned something new about how I communicate with my own team. Worth the two days."
+  },
+  {
+    "id": 117,
+    "name": "Mehmet Yılmaz",
+    "role": "Genel Müdür",
+    "company": "Yılmaz Tekstil Sanayi",
+    "country": "Turkey",
+    "review": "Doğrudan ve pratikti, teorik değildi. Fiyatlandırma konusundaki cesaret bölümü, ihracat ekibimizin yaklaşımını tamamen değiştirdi."
+  },
+  {
+    "id": 118,
+    "name": "Ayşe Kaya",
+    "role": "Pazarlama Direktörü",
+    "company": "Kaya Gıda Ürünleri",
+    "country": "Turkey",
+    "review": "What helped most was the brand storytelling framework for reaching buyers outside our usual markets. My whole marketing team still uses it in planning."
+  },
+  {
+    "id": 119,
+    "name": "Emre Demir",
+    "role": "Kurucu",
+    "company": "Demir Yapı Malzemeleri",
+    "country": "Turkey",
+    "review": "Aile şirketiyiz ve babamı yeni yaklaşımlara ikna etmek genelde imkansızdı. Bu eğitimde ikinci günün sonunda en çok soru soran kişi oydu."
+  }
+]
