@@ -119,7 +119,7 @@
         "kicker": "Backed by GYA Media & Apollon Papas",
         "title": "The Founder VAULT",
         "desc": "15 years of client-facing agency knowledge in one place: eBooks, workbooks, tool guides, checklists, podcasts and how-to handouts my team wrote for real client teams. The written half of The Invisible Hand System.",
-        "status": "waitlist",
+        "status": "live",
         "tag": "Knowledge library"
       }
     ],
@@ -210,7 +210,7 @@
         "label": "Knowledge library",
         "name": "The Founder VAULT",
         "line": "The written system: guides, workbooks, checklists.",
-        "status": "waitlist"
+        "status": "live"
       },
       {
         "id": "sprint",

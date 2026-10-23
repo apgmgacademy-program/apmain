@@ -12,17 +12,24 @@ carry no visible caption, which is the specified fallback. When the strings
 arrive they go into `journey.galleryAlts` / `story.shotAlts` neighbours in
 `src/i18n/en.json` and get rendered as `<figcaption>`.
 
-**2. Final slugs for the Mentorship and VAULT pages.** HANDOFF 5.4, 5.5, Part 4.
-Those pages do not exist yet. Both are shipped as unlinked `Waitlist` cards, with
-no `href` at all rather than a guessed one. When Apollo confirms the URLs, wire
-them into all four places:
+**2. Final slug for the Mentorship page.** HANDOFF 5.4, 5.5, Part 4.
+The page does not exist yet. It ships as an unlinked `Waitlist` card, with no
+`href` at all rather than a guessed one. When Apollo confirms the URL, wire it
+into all four places:
 
-- `PATH_LINKS` in `src/config.ts` (currently `vault: undefined`, `mentorship: undefined`)
-- `PROGRAM_MEDIA` in `src/config.ts` (currently `mentorship: {}`, `vault: {}`)
-- `public/llms.txt` (two "standalone page and URL coming soon" lines)
-- `public/sitemap.xml` (add two `<url>` entries)
+- `PATH_LINKS` in `src/config.ts` (currently `mentorship: undefined`)
+- `PROGRAM_MEDIA` in `src/config.ts` (currently `mentorship: {}`)
+- `public/llms.txt` (the "standalone page and URL coming soon" line)
+- `public/sitemap.xml` (add a `<url>` entry, if the page lives on this host)
 
-Do not invent `/mentorship` or `/vault` before then.
+Do not invent `/mentorship` before then.
+
+**The VAULT: DONE (2026-10-23).** It is on sale on its own host, so the card,
+the path step, the nav dropdown and `llms.txt` link to `SITE.vaultUrl`
+(https://vault-landing.apollonpapas.com/), with a `Live` chip and a banner in
+the VAULT's sign-in look (`public/images/vault-banner.jpg`). No sitemap entry:
+it is another host. The VAULT's domain is due to change before its store
+launch; update `SITE.vaultUrl` and the `llms.txt` line then.
 
 **3. ~~An EY logo asset.~~ DONE (2026-09-01).** Kyriakos supplied `ey.svg`
 (renamed from `ey_logo.svg` to match the folder convention) and it is now in

@@ -12,9 +12,9 @@
 - The Mentorship: 18-hour program for founders and executives leading teams of
   10 to 500. Waitlist open on apollonpapas.com; standalone page and URL coming
   soon (add the link here once it launches).
-- The Founder VAULT: knowledge library of 15 years of agency handouts, guides
-  and workbooks. Waitlist open on apollonpapas.com; standalone page and URL
-  coming soon (add the link here once it launches).
+- [The Founder VAULT](https://vault-landing.apollonpapas.com/): knowledge library
+  of 15 years of agency handouts, guides, workbooks, checklists and podcasts,
+  one searchable membership.
 - [Career Readiness Sprint](https://join-crs.com/): 4-week job-market preparation
   for students (in Greek).
 

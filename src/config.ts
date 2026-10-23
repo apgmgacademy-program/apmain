@@ -18,6 +18,10 @@ export const SITE = {
   gyaUrl: 'https://www.gya-media.com/',
   webinarUrl: '/webinar-powerup',
   sprintUrl: '/fromchaostorevenue',
+  // The VAULT's own landing page (plans and checkout), a separate app on its own
+  // host. The VAULT's domain is due to change before its store launch; when it
+  // does, this is the one line to update here (the old host redirects meanwhile).
+  vaultUrl: 'https://vault-landing.apollonpapas.com/',
   // Apollo has paused the Greek locale. The toggle is hidden and i18n is pinned
   // to EN (see src/i18n/index.ts); el.json stays in the build so flipping this
   // back to true is the only change needed to bring Greek back.
@@ -74,10 +78,12 @@ export const PROGRAM_MEDIA: Record<string, ProgramMedia> = {
   // The webinar banner is a finished 2:1 layout with type running to its edges,
   // so it keeps its own ratio rather than being cropped to 16/9.
   powerup: { image: '/images/powerup-banner.jpg', href: '/webinar-powerup', span: 'wide', ratio: '1400 / 684' },
-  // The two unreleased programs have nowhere to point yet, so they stay
-  // unlinked and render without the arrow.
+  // The Mentorship has nowhere to point yet, so it stays unlinked and renders
+  // without the arrow.
   mentorship: {},
-  vault: {},
+  // The banner is the VAULT's own sign-in look: its covers on a tilted wall
+  // under the landing page's headline. Like CRS, it lives on its own host.
+  vault: { image: '/images/vault-banner.jpg', href: SITE.vaultUrl, span: 'wide' },
   // Lives on its own domain, so this one opens in a new tab (ProgramCard adds
   // target=_blank for absolute http(s) links).
   crs: { image: '/images/crs-banner-16x9-dark.png', href: SITE.crsUrl, span: 'wide' },
@@ -145,11 +151,12 @@ export const PUBLICATIONS: Publication[] = [];
 export const PUBLICATIONS_YEAR = '2023-2025';
 
 // HANDOFF 5.5: steps 1, 3 link to their programme pages and 5 to gya-media.com.
-// Steps 2 and 4 (VAULT, Mentorship) stay unlinked until those pages exist and
-// Apollo confirms the slugs - do not guess them. See OPEN-ITEMS.md.
+// Step 2 (VAULT) links to its own landing page since 2026-10-23. Step 4
+// (Mentorship) stays unlinked until its page exists and Apollo confirms the
+// slug - do not guess it. See OPEN-ITEMS.md.
 export const PATH_LINKS: Record<string, string | undefined> = {
   powerup: SITE.webinarUrl,
-  vault: undefined,
+  vault: SITE.vaultUrl,
   sprint: SITE.sprintUrl,
   mentorship: undefined,
   gya: SITE.gyaUrl,

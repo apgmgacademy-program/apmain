@@ -11,9 +11,10 @@ type PathStep = {
 };
 
 // The value ladder (HANDOFF 5.5): five steps rising left to right, so the shape
-// of the offer is readable before any of the copy is. Steps 2 and 4 carry no
-// href on purpose - the Mentorship and VAULT pages do not exist yet and the
-// slugs are Apollo's to confirm, so guessing one would ship a broken link.
+// of the offer is readable before any of the copy is. Step 4 carries no
+// href on purpose - the Mentorship page does not exist yet and the slug is
+// Apollo's to confirm, so guessing one would ship a broken link. Step 2 links
+// to the VAULT's own landing page (PATH_LINKS).
 //
 // No prices here, by decision: the only money word on the whole site is the
 // Free label on PowerUp!.
