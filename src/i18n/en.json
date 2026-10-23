@@ -107,20 +107,20 @@
         "tag": "Start here · Free"
       },
       {
-        "id": "mentorship",
-        "kicker": "18-hour course",
-        "title": "The Mentorship",
-        "desc": "Born from 9,000+ hours of enterprise consulting: a comprehensive 18-hour course for founders and executives leading teams of 10 to 500 people into a rocket launch. Restructure your mindset, hone your skills, learn new tools, and scale up your operations and efficiency. Made simple for smaller founders and executives who are looking to adapt their business and leading tactics to the new era of AI with upgraded processes, tools, and global reach.",
-        "status": "waitlist",
-        "tag": "Flagship"
-      },
-      {
         "id": "vault",
         "kicker": "Backed by GYA Media & Apollon Papas",
         "title": "The Founder VAULT",
         "desc": "15 years of client-facing agency knowledge in one place: eBooks, workbooks, tool guides, checklists, podcasts and how-to handouts my team wrote for real client teams. The written half of The Invisible Hand System.",
         "status": "live",
         "tag": "Knowledge library"
+      },
+      {
+        "id": "mentorship",
+        "kicker": "18-hour course",
+        "title": "The Mentorship",
+        "desc": "Born from 9,000+ hours of enterprise consulting: a comprehensive 18-hour course for founders and executives leading teams of 10 to 500 people into a rocket launch. Restructure your mindset, hone your skills, learn new tools, and scale up your operations and efficiency. Made simple for smaller founders and executives who are looking to adapt their business and leading tactics to the new era of AI with upgraded processes, tools, and global reach.",
+        "status": "waitlist",
+        "tag": "Flagship"
       }
     ],
     "students": [

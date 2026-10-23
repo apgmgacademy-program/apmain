@@ -102,18 +102,18 @@
         "status": "free"
       },
       {
-        "id": "mentorship",
-        "kicker": "Course 18 ωρών",
-        "title": "The Mentorship",
-        "desc": "A comprehensive 18-hour course for founders and executives leading teams of 10 to 500 people into a rocket launch. Restructure your mindset, hone your skills, learn new tools, and scale up your operations and efficiency. A programme born from 9,000+ hours of Enterprise consulting, made simple for smaller founders and executives who are looking to adapt their business and leading tactics to the new era of AI with upgraded processes, tools, and global reach.",
-        "status": "soon"
-      },
-      {
         "id": "vault",
         "kicker": "Backed by GYA Media & Απόλλων Παπάς",
         "title": "The Founder VAULT",
         "desc": "Online content most of the time is not valid or valuable. You find yourself reading AI-written articles, or posts and reels that do not provide true guidance and a clear path for execution. This hub is the result of 15 years of experience and the client-facing handouts my team and I have written and delivered in in-house trainings, client seminars, and how-to guides made for teams that needed an extra hand. All packed into a useful, immensely valuable vault that gives you direct access to agency knowledge: eBooks, workbooks, tool guides, PDF handouts, checklists, podcasts, interviews, and more.",
         "status": "live"
+      },
+      {
+        "id": "mentorship",
+        "kicker": "Course 18 ωρών",
+        "title": "The Mentorship",
+        "desc": "A comprehensive 18-hour course for founders and executives leading teams of 10 to 500 people into a rocket launch. Restructure your mindset, hone your skills, learn new tools, and scale up your operations and efficiency. A programme born from 9,000+ hours of Enterprise consulting, made simple for smaller founders and executives who are looking to adapt their business and leading tactics to the new era of AI with upgraded processes, tools, and global reach.",
+        "status": "soon"
       }
     ],
     "students": [
