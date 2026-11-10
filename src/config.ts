@@ -19,9 +19,8 @@ export const SITE = {
   webinarUrl: '/webinar-powerup',
   sprintUrl: '/fromchaostorevenue',
   // The VAULT's own landing page (plans and checkout), a separate app on its own
-  // host. The VAULT's domain is due to change before its store launch; when it
-  // does, this is the one line to update here (the old host redirects meanwhile).
-  vaultUrl: 'https://vault-landing.apollonpapas.com/',
+  // domain since 10 Nov 2026 (the old vault-landing host redirects here).
+  vaultUrl: 'https://foundrsvault.com/',
   // Apollo has paused the Greek locale. The toggle is hidden and i18n is pinned
   // to EN (see src/i18n/index.ts); el.json stays in the build so flipping this
   // back to true is the only change needed to bring Greek back.
