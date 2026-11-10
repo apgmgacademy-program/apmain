@@ -192,6 +192,10 @@
   },
   "footer": {
     "rights": "© {{from}}-{{to}} Apollon Papas",
+    "legalNav": "Legal",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
     "tagline": "Founder, GYA Media Group"
   },
   "path": {

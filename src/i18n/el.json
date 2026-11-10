@@ -132,6 +132,10 @@
   },
   "footer": {
     "rights": "© {{from}}-{{to}} Απόλλων Παπάς",
+    "legalNav": "Νομικά",
+    "terms": "Όροι & Προϋποθέσεις",
+    "privacy": "Απόρρητο",
+    "cookies": "Cookies",
     "tagline": "Founder, GYA Media Group"
   }
 }

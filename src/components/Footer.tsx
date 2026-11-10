@@ -25,6 +25,15 @@ export default function Footer({ route }: { route: Route }) {
           <span className="footer-copy" data-edit-id="footer.legal.copyright" data-edit-key="footer.rights">
             {t('footer.rights', { from: SITE.foundedYear, to: year })}
           </span>
+          {/* The Unified Terms v1.0 and the two policies. They are served by the
+              6WS build on this same domain (nginx /legal mounts), so these are
+              plain links out of this app, not router links. The pages are in
+              English only. */}
+          <nav className="footer-legal-nav" aria-label={t('footer.legalNav')}>
+            <a href="/legal/terms" data-edit-id="footer.legal.terms" data-edit-key="footer.terms">{t('footer.terms')}</a>
+            <a href="/legal#privacy" data-edit-id="footer.legal.privacy" data-edit-key="footer.privacy">{t('footer.privacy')}</a>
+            <a href="/legal#cookies" data-edit-id="footer.legal.cookies" data-edit-key="footer.cookies">{t('footer.cookies')}</a>
+          </nav>
         </div>
       </div>
     </footer>
